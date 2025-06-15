@@ -4,7 +4,6 @@
     ```bash
     ln -s ~/Desktop/git/dots-hyprland/.config/hypr/ ~/.config/hypr 
     ln -s ~/Desktop/git/dots-hyprland/.config/nvim ~/.config/nvim 
-    ln -s ~/Desktop/git/dots-hyprland/.config/foot ~/.config/foot
     ln -s ~/Desktop/git/dots-hyprland/.config/fish ~/.config/fish
     ln -s ~/Desktop/git/dots-hyprland/.config/kanshi ~/.config/kanshi
     ```

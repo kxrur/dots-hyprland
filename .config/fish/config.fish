@@ -20,7 +20,10 @@ end
 alias pamcan pacman
 alias ls 'eza --icons'
 alias clear "printf '\033[2J\033[3J\033[1;1H'"
-    
+
+alias nv=nvim
+alias sharky="display3d ~/Pictures/models/blahaj.obj -a [0,0.025,0] -r [-0.2,-1,-0.05] --fov 120"
+alias sharky-static="display3d ~/Pictures/models/blahaj.obj -a [0,0.0,0] -r [-0.2,-1,-0.05] --fov 120"
 
 # function fish_prompt
 #   set_color cyan; echo (pwd)
