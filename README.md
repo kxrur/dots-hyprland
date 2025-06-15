@@ -1,6 +1,12 @@
 <div align="center">
-    <h1>【 end_4's Hyprland dotfiles 】</h1>
-    <h3></h3>
+    <h1>【 Some setup 】</h1>
+    <h3>System links</h3>
+    ```bash
+    ln -s ~/Desktop/git/dots-hyprland/.config/hypr/ ~/.config/hypr 
+    ln -s ~/Desktop/git/dots-hyprland/.config/nvim ~/.config/nvim 
+    ln -s ~/Desktop/git/dots-hyprland/.config/foot ~/.config/foot
+    ln -s ~/Desktop/git/dots-hyprland/.config/fish ~/.config/fish
+    ```
 </div>
 
 <div align="center"> 
