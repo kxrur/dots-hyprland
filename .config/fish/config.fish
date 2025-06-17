@@ -25,6 +25,8 @@ alias nv=nvim
 alias sharky="display3d ~/Pictures/models/blahaj.obj -a [0,0.025,0] -r [-0.2,-1,-0.05] --fov 120"
 alias sharky-static="display3d ~/Pictures/models/blahaj.obj -a [0,0.0,0] -r [-0.2,-1,-0.05] --fov 120"
 
+zoxide init --cmd cd fish | source
+
 # function fish_prompt
 #   set_color cyan; echo (pwd)
 #   set_color green; echo '> '
