@@ -53,6 +53,7 @@ Item {
     StyledRectangularShadow {
         target: overviewBackground
     }
+    /*
     Rectangle { // Background
         id: overviewBackground
         property real padding: 10
@@ -265,5 +266,5 @@ Item {
                 }
             }
         }
-    }
+      }*/
 }
