@@ -288,7 +288,7 @@ Singleton {
     }
 
     sizes: QtObject {
-        property real barHeight: 40
+        property real barHeight: 35
         property real barCenterSideModuleWidth: ConfigOptions?.bar.verbose ? 360 : 140
         property real barCenterSideModuleWidthShortened: 280
         property real barCenterSideModuleWidthHellaShortened: 190
