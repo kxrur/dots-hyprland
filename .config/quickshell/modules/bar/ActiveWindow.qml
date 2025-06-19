@@ -23,19 +23,19 @@ Item {
 
         StyledText {
             Layout.fillWidth: true
-            font.pixelSize: Appearance.font.pixelSize.smaller
-            color: Appearance.colors.colSubtext
-            elide: Text.ElideRight
-            text: root.activeWindow?.activated ? root.activeWindow?.appId : qsTr("Desktop")
-        }
-
-        StyledText {
-            Layout.fillWidth: true
-            font.pixelSize: Appearance.font.pixelSize.small
+            font.pixelSize: Appearance.font.pixelSize.smal
             color: Appearance.colors.colOnLayer0
             elide: Text.ElideRight
-            text: root.activeWindow?.activated ? root.activeWindow?.title : `${qsTr("Workspace")} ${monitor.activeWorkspace?.id}`
+            text: root.activeWindow?.activated ? root.activeWindow?.appId : `${qsTr("Workspace")} ${monitor.activeWorkspace?.id}`
         }
+
+        // StyledText {
+        //     Layout.fillWidth: true
+        //     font.pixelSize: Appearance.font.pixelSize.small
+        //     color: Appearance.colors.colOnLayer0
+        //     elide: Text.ElideRight
+        //     text: root.activeWindow?.activated ? root.activeWindow?.title : `${qsTr("Workspace")} ${monitor.activeWorkspace?.id}`
+        // }
 
     }
 
