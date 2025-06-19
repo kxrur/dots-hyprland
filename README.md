@@ -7,6 +7,7 @@
     ln -s ~/Desktop/git/dots-hyprland/.config/fish ~/.config/fish
     ln -s ~/Desktop/git/dots-hyprland/.config/kanshi ~/.config/kanshi
     ln -s ~/Desktop/git/dots-hyprland/.config/kitty ~/.config/kitty
+    ln -s ~/Desktop/git/dots-hyprland/.config/zathura ~/.config/zathura
     ```
 </div>
 
