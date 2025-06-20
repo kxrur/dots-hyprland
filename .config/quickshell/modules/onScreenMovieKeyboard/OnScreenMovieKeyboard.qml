@@ -26,25 +26,27 @@ Scope { // Scope
     }
 
     Loader {
-        id: oskLoader
+        id: oskMovieLoader
         active: false
         onActiveChanged: {
-            if (!oskLoader.active) {
+            if (!oskMovieLoader.active) {
                 Ydotool.releaseAllKeys();
             }
         }
         
         sourceComponent: PanelWindow { // Window
-            id: oskRoot
-            visible: oskLoader.active
+            id: oskMovieRoot
+            visible: oskMovieLoader.active
 
             anchors {
+                bottom: false
+                left: true
+                right: false
                 top: true
-                right: true
             }
 
             function hide() {
-                oskLoader.active = false
+                oskMovieLoader.active = false
             }
             exclusiveZone: root.pinned ? implicitHeight - Appearance.sizes.hyprlandGapsOut : 0
             implicitWidth: oskBackground.width + Appearance.sizes.elevationMargin * 2
@@ -75,7 +77,7 @@ Scope { // Scope
 
                 Keys.onPressed: (event) => { // Esc to close
                     if (event.key === Qt.Key_Escape) {
-                        oskRoot.hide()
+                        oskMovieRoot.hide()
                     }
                 }
 
@@ -83,35 +85,6 @@ Scope { // Scope
                     id: oskRowLayout
                     anchors.centerIn: parent
                     spacing: 5
-                    VerticalButtonGroup {
-                        OskControlButton { // Pin button
-                            toggled: root.pinned
-                            onClicked: root.pinned = !root.pinned
-                            contentItem: MaterialSymbol {
-                                text: "keep"
-                                horizontalAlignment: Text.AlignHCenter
-                                iconSize: Appearance.font.pixelSize.larger
-                                color: root.pinned ? Appearance.m3colors.m3onPrimary : Appearance.colors.colOnLayer0
-                            }
-                        }
-                        OskControlButton {
-                            onClicked: () => {
-                                oskRoot.hide()
-                            }
-                            contentItem: MaterialSymbol {
-                                horizontalAlignment: Text.AlignHCenter
-                                text: "keyboard_hide"
-                                iconSize: Appearance.font.pixelSize.larger
-                            }
-                        }
-                    }
-                    Rectangle {
-                        Layout.topMargin: 20
-                        Layout.bottomMargin: 20
-                        Layout.fillHeight: true
-                        implicitWidth: 1
-                        color: Appearance.colors.colOutlineVariant
-                    }
                     OskContent {
                         id: oskContent
                         Layout.fillWidth: true
@@ -126,42 +99,42 @@ Scope { // Scope
         target: "osk"
 
         function toggle(): void {
-            oskLoader.active = !oskLoader.active
+            oskMovieLoader.active = !oskMovieLoader.active
         }
 
         function close(): void {
-            oskLoader.active = false
+            oskMovieLoader.active = false
         }
 
         function open(): void {
-            oskLoader.active = true
+            oskMovieLoader.active = true
         }
     }
 
     GlobalShortcut {
-        name: "oskToggle"
-        description: qsTr("Toggles on screen keyboard on press")
+        name: "oskMovieToggle"
+        description: qsTr("Toggles on screen movie keyboard on press")
 
         onPressed: {
-            oskLoader.active = !oskLoader.active;
+            oskMovieLoader.active = !oskMovieLoader.active;
         }
     }
 
     GlobalShortcut {
-        name: "oskOpen"
-        description: qsTr("Opens on screen keyboard on press")
+        name: "oskMovieOpen"
+        description: qsTr("Opens on screen movie keyboard on press")
 
         onPressed: {
-            oskLoader.active = true;
+            oskMovieLoader.active = true;
         }
     }
 
     GlobalShortcut {
-        name: "oskClose"
-        description: qsTr("Closes on screen keyboard on press")
+        name: "oskMovieClose"
+        description: qsTr("Closes on screen movie keyboard on press")
 
         onPressed: {
-            oskLoader.active = false;
+            oskMovieLoader.active = false;
         }
     }
 

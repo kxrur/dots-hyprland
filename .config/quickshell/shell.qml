@@ -14,6 +14,7 @@ import "./modules/mediaControls/"
 import "./modules/notificationPopup/"
 import "./modules/onScreenDisplay/"
 import "./modules/onScreenKeyboard/"
+import "./modules/onScreenMovieKeyboard/"
 import "./modules/overview/"
 import "./modules/screenCorners/"
 import "./modules/session/"
@@ -38,6 +39,7 @@ ShellRoot {
     property bool enableOnScreenDisplayBrightness: true
     property bool enableOnScreenDisplayVolume: true
     property bool enableOnScreenKeyboard: true
+    property bool enableOnScreenMovieKeyboard: true
     property bool enableOverview: true
     property bool enableReloadPopup: true
     property bool enableScreenCorners: true
@@ -63,6 +65,7 @@ ShellRoot {
     LazyLoader { active: enableOnScreenDisplayBrightness; component: OnScreenDisplayBrightness {} }
     LazyLoader { active: enableOnScreenDisplayVolume; component: OnScreenDisplayVolume {} }
     LazyLoader { active: enableOnScreenKeyboard; component: OnScreenKeyboard {} }
+    LazyLoader { active: enableOnScreenMovieKeyboard; component: OnScreenMovieKeyboard {} }
     LazyLoader { active: enableOverview; component: Overview {} }
     LazyLoader { active: enableReloadPopup; component: ReloadPopup {} }
     LazyLoader { active: enableScreenCorners; component: ScreenCorners {} }

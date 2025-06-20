@@ -84,7 +84,7 @@ Scope {
                     property real lastScrollX: 0
                     property real lastScrollY: 0
                     property bool trackingScroll: false
-                    acceptedButtons: Qt.LeftButton
+                    acceptedButtons: Qt.LeftButton | Qt.Rightbutton
                     hoverEnabled: true
                     propagateComposedEvents: true
                     onEntered: (event) => {
@@ -97,6 +97,9 @@ Scope {
                     onPressed: (event) => {
                         if (event.button === Qt.LeftButton) {
                             Hyprland.dispatch('global quickshell:sidebarLeftOpen')
+                        }
+                        else if (event.button === Qt.RightButton) {
+                            Hyprland.dispatch('global quickshell:oskMovieToggle')
                         }
                     }
                     // Scroll to change brightness
@@ -227,12 +230,15 @@ Scope {
                             Layout.fillHeight: true
                             MouseArea { // Right-click to toggle overview
                                 anchors.fill: parent
-                                acceptedButtons: Qt.RightButton
+                                acceptedButtons: Qt.RightButton | Qt.MiddleButton
                                 
                                 onPressed: (event) => {
                                     if (event.button === Qt.RightButton) {
                                         Hyprland.dispatch('global quickshell:overviewToggle')
+                                    }else if (event.button === Qt.MiddleButton) {
+                                        Hyprland.dispatch('global quickshell:oskToggle')
                                     }
+
                                 }
                             }
                         }
