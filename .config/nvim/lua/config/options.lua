@@ -2,7 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 local opt = vim.opt
-opt.scrolloff = 15 -- Lines of context
+-- opt.scrolloff = 15 -- Lines of context
 opt.textwidth = 80
 opt.numberwidth = 1
 opt.spelllang = { "en" }
