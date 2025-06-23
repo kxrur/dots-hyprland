@@ -14,9 +14,10 @@ ColumnLayout {
     StyledText {
         text: root.title
         font.pixelSize: Appearance.font.pixelSize.larger
+        font.weight: Font.Medium
     }
     ColumnLayout {
         id: sectionContent
-        spacing: 4
+        spacing: 8
     }
 }

@@ -28,19 +28,19 @@ ApplicationWindow {
     property bool showNextTime: false
     property var pages: [
         {
-            name: "General",
-            icon: "tune",
-            component: "modules/settings/General.qml"
-        },
-        {
             name: "Style",
             icon: "palette",
-            component: "modules/settings/Style.qml"
+            component: "modules/settings/StyleConfig.qml"
+        },
+        {
+            name: "Interface",
+            icon: "cards",
+            component: "modules/settings/InterfaceConfig.qml"
         },
         {
             name: "Services",
             icon: "settings",
-            component: "modules/settings/Services.qml"
+            component: "modules/settings/ServicesConfig.qml"
         },
         {
             name: "About",
@@ -61,14 +61,35 @@ ApplicationWindow {
 
     minimumWidth: 600
     minimumHeight: 400
-    width: 900
-    height: 650
+    width: 1100
+    height: 750
     color: Appearance.m3colors.m3background
 
     ColumnLayout {
         anchors {
             fill: parent
             margins: contentPadding
+        }
+
+        Keys.onPressed: (event) => {
+            if (event.modifiers === Qt.ControlModifier) {
+                if (event.key === Qt.Key_PageDown) {
+                    root.currentPage = Math.min(root.currentPage + 1, root.pages.length - 1)
+                    event.accepted = true;
+                } 
+                else if (event.key === Qt.Key_PageUp) {
+                    root.currentPage = Math.max(root.currentPage - 1, 0)
+                    event.accepted = true;
+                }
+                else if (event.key === Qt.Key_Tab) {
+                    root.currentPage = (root.currentPage + 1) % root.pages.length;
+                    event.accepted = true;
+                }
+                else if (event.key === Qt.Key_Backtab) {
+                    root.currentPage = (root.currentPage - 1 + root.pages.length) % root.pages.length;
+                    event.accepted = true;
+                }
+            }
         }
 
         Item { // Titlebar
@@ -78,7 +99,12 @@ ApplicationWindow {
             implicitHeight: Math.max(titleText.implicitHeight, windowControlsRow.implicitHeight)
             StyledText {
                 id: titleText
-                anchors.centerIn: parent
+                anchors {
+                    left: ConfigOptions.windows.centerTitle ? undefined : parent.left
+                    horizontalCenter: ConfigOptions.windows.centerTitle ? parent.horizontalCenter : undefined
+                    verticalCenter: parent.verticalCenter
+                    leftMargin: 12
+                }
                 color: Appearance.colors.colOnLayer0
                 text: "Settings"
                 font.pixelSize: Appearance.font.pixelSize.title
@@ -125,7 +151,9 @@ ApplicationWindow {
                     spacing: 10
                     expanded: root.width > 900
                     
-                    NavigationRailExpandButton {}
+                    NavigationRailExpandButton {
+                        focus: root.visible
+                    }
 
                     FloatingActionButton {
                         id: fab
@@ -180,7 +208,8 @@ ApplicationWindow {
                         target: root
                         function onCurrentPageChanged() {
                             if (pageLoader.sourceComponent !== root.pages[root.currentPage].component) {
-                                switchAnim.restart();
+                                switchAnim.complete();
+                                switchAnim.start();
                             }
                         }
                     }
@@ -193,7 +222,7 @@ ApplicationWindow {
                             properties: "opacity"
                             from: 1
                             to: 0
-                            duration: 150
+                            duration: 100
                             easing.type: Appearance.animation.elementMoveExit.type
                             easing.bezierCurve: Appearance.animationCurves.emphasizedFirstHalf
                         }
@@ -207,7 +236,7 @@ ApplicationWindow {
                             properties: "opacity"
                             from: 0
                             to: 1
-                            duration: 250
+                            duration: 200
                             easing.type: Appearance.animation.elementMoveEnter.type
                             easing.bezierCurve: Appearance.animationCurves.emphasizedLastHalf
                         }
