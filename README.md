@@ -74,19 +74,28 @@ bash -c "$(curl -s https://end-4.github.io/dots-hyprland-wiki/setup.sh)"
 
 </details>
 
+<<<<<<< HEAD
 <details>
   <summary>Logo ideas welcome</summary>
 
 - See [#1436](https://github.com/end-4/dots-hyprland/issues/1436)
 
 </details>
+=======
+>>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
 
 <div align="center">
     <h2>• screenshots •</h2>
     <h3></h3>
 </div>
 
-## illogical-impulse<sup>Quickshell</sup>
+<div align="center">
+    <img src=".github/assets/illogical-impulse.svg" alt="illogical-impulse logo">
+</div>
+
+_illogical-impulse is the latest and only style that I actively use. Other past styles are still there for your viewing pleasure and not actual use, but code is still available, see below._
+
+### illogical-impulse<sup>Quickshell</sup>
 
 | AI                                                                                        | Common widgets                                                                            |
 | :---------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
@@ -94,12 +103,16 @@ bash -c "$(curl -s https://end-4.github.io/dots-hyprland-wiki/setup.sh)"
 | Window management                                                                         | Weeb power                                                                                |
 | ![image](https://github.com/user-attachments/assets/86cc511b-0d33-4c78-bcc0-3037d02a17da) | ![image](https://github.com/user-attachments/assets/292259fc-57d3-4663-a583-2ce2faad13fb) |
 
+<<<<<<< HEAD
 By the way...
 
 - The funny notification positions are mimicking Android 16's dragging behavior
 - The clock on the wallpaper is automatically placed at the "least busy" region of the image
 
 ## illogical-impulse<sup>AGS</sup> <sub>(Deprecated)</sub>
+=======
+### illogical-impulse<sup>AGS</sup> <sub>(Deprecated)</sub>
+>>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
 
 | AI                                                                                        | Common widgets                                                                                        |
 | :---------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- |
@@ -107,32 +120,47 @@ By the way...
 | Window management                                                                         | Weeb power                                                                                            |
 | ![image](https://github.com/user-attachments/assets/02983b9b-79ba-4c25-8717-90bef2357ae5) | ![image](https://github.com/user-attachments/assets/bbb332ec-962a-4e88-a95b-486d0bd8ce76)             |
 
-## Unsupported stuff
+### Unsupported stuff
 
-- The pics are here mainly for your viewing pleasure
-- The files are still available, feel free to grab them from the [`archive`](https://github.com/end-4/dots-hyprland/tree/archive) branch if you're willing to see some spaghetti and troubleshoot
+- Source code not likely to work but still available in the [`archive`](https://github.com/end-4/dots-hyprland/tree/archive) branch. Extremely spaghetti.
 - Click image for a presentation video
 
+<<<<<<< HEAD
 ### [m3ww](https://github.com/end-4/dots-hyprland/tree/archive)
 
+=======
+#### m3ww
+>>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
    <a href="https://streamable.com/85ch8x">
     <img src="https://github.com/end-4/dots-hyprland/assets/97237370/09533e64-b6d7-47eb-a840-ee90c6776adf" alt="Material Eww!">
    </a>
 
+<<<<<<< HEAD
 ### [NovelKnock](https://github.com/end-4/dots-hyprland/tree/archive)
 
+=======
+#### NovelKnock
+>>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
    <a href="https://streamable.com/7vo61k">
     <img src="https://github.com/end-4/dots-hyprland/assets/97237370/42903d03-bf6f-49d4-be7f-dd77e6cb389d" alt="Desktop Preview">
    </a>
 
+<<<<<<< HEAD
 ### [Hybrid](https://github.com/end-4/dots-hyprland/tree/archive)
 
+=======
+#### Hybrid
+>>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
    <a href="https://streamable.com/4oogot">
     <img src="https://github.com/end-4/dots-hyprland/assets/97237370/190deb1e-f6f5-46ce-8cf0-9b39944c079d" alt="click the circles!">
    </a>
 
+<<<<<<< HEAD
 ### [Windoes](https://github.com/end-4/dots-hyprland/tree/archive)
 
+=======
+#### Windoes
+>>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
    <a href="https://streamable.com/5qx614">
     <img src="https://github.com/end-4/dots-hyprland/assets/97237370/b15317b1-f295-49f5-b90c-fb6328b8d886" alt="Desktop Preview">
    </a>
