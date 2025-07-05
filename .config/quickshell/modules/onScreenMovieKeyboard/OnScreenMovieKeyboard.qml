@@ -15,7 +15,7 @@ import Quickshell.Hyprland
 
 Scope { // Scope
     id: root
-    property bool pinned: ConfigOptions?.osk.pinnedOnStartup ?? false
+    property bool pinned: Config.options?.osk.pinnedOnStartup ?? false
 
     component OskControlButton: GroupButton { // Pin button
         baseWidth: 40
@@ -51,7 +51,7 @@ Scope { // Scope
             exclusiveZone: root.pinned ? implicitHeight - Appearance.sizes.hyprlandGapsOut : 0
             implicitWidth: oskBackground.width + Appearance.sizes.elevationMargin * 2
             implicitHeight: oskBackground.height + Appearance.sizes.elevationMargin * 2
-            WlrLayershell.namespace: "quickshell:osk"
+            WlrLayershell.namespace: "quickshell:oskMovie"
             WlrLayershell.layer: WlrLayer.Overlay
             // Hyprland 0.49: Focus is always exclusive and setting this breaks mouse focus grab
             // WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
@@ -96,7 +96,7 @@ Scope { // Scope
     }
 
     IpcHandler {
-        target: "osk"
+        target: "oskMovie"
 
         function toggle(): void {
             oskMovieLoader.active = !oskMovieLoader.active
