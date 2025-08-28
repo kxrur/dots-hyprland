@@ -191,6 +191,7 @@ Item { // Bar content region
 
     FocusedScrollMouseArea { // Right side | scroll to change volume
         id: barRightSideMouseArea
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
 
         anchors {
             top: parent.top
@@ -215,6 +216,8 @@ Item { // Bar content region
         onPressed: event => {
             if (event.button === Qt.LeftButton) {
                 GlobalStates.sidebarRightOpen = !GlobalStates.sidebarRightOpen;
+            } else if (event.button === Qt.RightButton) {
+                MprisController.activePlayer.next();
             }
         }
 

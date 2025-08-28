@@ -26,14 +26,15 @@ Scope {
     property list<real> visualizerPoints: []
 
     property bool hasPlasmaIntegration: false
-    Process {
-        id: plasmaIntegrationAvailabilityCheckProc
-        running: true
-        command: ["bash", "-c", "command -v plasma-browser-integration-host"]
-        onExited: (exitCode, exitStatus) => {
-            root.hasPlasmaIntegration = (exitCode === 0);
-        }
-    }
+    // Disabled plasma integration check since we're using Hyprland, not Plasma
+    // Process {
+    //     id: plasmaIntegrationAvailabilityCheckProc
+    //     running: true
+    //     command: ["bash", "-c", "command -v plasma-browser-integration-host"]
+    //     onExited: (exitCode, exitStatus) => {
+    //         root.hasPlasmaIntegration = (exitCode === 0);
+    //     }
+    // }
     function isRealPlayer(player) {
         if (!Config.options.media.filterDuplicatePlayers) {
             return true;
@@ -159,7 +160,10 @@ Scope {
 
         function toggle(): void {
             mediaControlsLoader.active = !mediaControlsLoader.active;
-            if(mediaControlsLoader.active) Notifications.timeoutAll();
+            
+            if(mediaControlsLoader.active) {
+                Notifications.timeoutAll();
+            }
         }
 
         function close(): void {
