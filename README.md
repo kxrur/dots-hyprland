@@ -75,94 +75,180 @@ bash -c "$(curl -s https://end-4.github.io/dots-hyprland-wiki/setup.sh)"
 </details>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
 <details>
   <summary>Logo ideas welcome</summary>
 
 - See [#1436](https://github.com/end-4/dots-hyprland/issues/1436)
 
+# </details>
+
+> > > > > > > # f973052d16cedb3c1ba580e88f22891036388be6
+
+<details>
+    <summary>Discord</summary>
+        <a href="https://discord.gg/GtdRBXgMwq"> Server link </a> | I hope this provides a friendlier environment for support without needing me to personally accept every friend request/DM. For real issues, prefer GitHub
+
 </details>
-=======
->>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
+
+_Note: **THERE IS NO FUCKING WAYBAR**_
+
+> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
 
 <div align="center">
     <h2>• screenshots •</h2>
     <h3></h3>
 </div>
 
-<div align="center">
-    <img src=".github/assets/illogical-impulse.svg" alt="illogical-impulse logo">
-</div>
-
-_illogical-impulse is the latest and only style that I actively use. Other past styles are still there for your viewing pleasure and not actual use, but code is still available, see below._
+<table style="border-collapse: collapse;">
+  <tr>
+    <td width="25%">
+      <img src=".github/assets/illogical-impulse.svg" alt="illogical-impulse logo" style="float:left; width:100%;">
+    </td>
+    <td width="75%">
+      <i>latest and only style that I actively use. Other past styles are still there for your viewing pleasure and not actual use, but code is still available, see below.</i>
+    </td>
+  </tr>
+</table>
 
 ### illogical-impulse<sup>Quickshell</sup>
 
-| AI                                                                                        | Common widgets                                                                            |
+<<<<<<< HEAD
+| AI | Common widgets |
 | :---------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
 | ![image](https://github.com/user-attachments/assets/08d26785-b54d-4ad1-875b-bb08cc6757f5) | ![image](https://github.com/user-attachments/assets/4fcd63d9-0943-4b21-8737-4bed97b71961) |
+| Window management | Weeb power |
+=======
+Widget system: Quickshell | Support: Yes
+
+[Showcase video](https://www.youtube.com/watch?v=RPwovTInagE)
+
+| AI, settings app                                                                          | Some widgets                                                                              |
+| :---------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
+| ![image](https://github.com/user-attachments/assets/4d45e860-ae60-418a-a564-309b4939f5c4) | ![image](https://github.com/user-attachments/assets/4fcd63d9-0943-4b21-8737-4bed97b71961) |
 | Window management                                                                         | Weeb power                                                                                |
-| ![image](https://github.com/user-attachments/assets/86cc511b-0d33-4c78-bcc0-3037d02a17da) | ![image](https://github.com/user-attachments/assets/292259fc-57d3-4663-a583-2ce2faad13fb) |
+
+> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
+> > > > > > > | ![image](https://github.com/user-attachments/assets/86cc511b-0d33-4c78-bcc0-3037d02a17da) | ![image](https://github.com/user-attachments/assets/292259fc-57d3-4663-a583-2ce2faad13fb) |
 
 <<<<<<< HEAD
 By the way...
+
+<<<<<<< HEAD
 
 - The funny notification positions are mimicking Android 16's dragging behavior
 - The clock on the wallpaper is automatically placed at the "least busy" region of the image
 
 ## illogical-impulse<sup>AGS</sup> <sub>(Deprecated)</sub>
+
 =======
+
 ### illogical-impulse<sup>AGS</sup> <sub>(Deprecated)</sub>
->>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
 
-| AI                                                                                        | Common widgets                                                                                        |
-| :---------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- |
-| ![image](https://github.com/user-attachments/assets/9d7af13f-89ef-470d-ba78-d2288b79cf60) | ![image](https://github.com/end-4/dots-hyprland/assets/97237370/406b72b6-fa38-4f0d-a6c4-4d7d5d5ddcb7) |
-| Window management                                                                         | Weeb power                                                                                            |
-| ![image](https://github.com/user-attachments/assets/02983b9b-79ba-4c25-8717-90bef2357ae5) | ![image](https://github.com/user-attachments/assets/bbb332ec-962a-4e88-a95b-486d0bd8ce76)             |
+> > > > > > > f973052d16cedb3c1ba580e88f22891036388be6
 
-### Unsupported stuff
+| AI  | Common widgets |
+| :-- | :------------- |
+
+=======
+Widget system: AGS | Support: Limited, no new features
+
+| AI  | Common widgets |
+| :-- | :------------- |
+
+> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
+> > > > > > > | ![image](https://github.com/user-attachments/assets/9d7af13f-89ef-470d-ba78-d2288b79cf60) | ![image](https://github.com/end-4/dots-hyprland/assets/97237370/406b72b6-fa38-4f0d-a6c4-4d7d5d5ddcb7) |
+> > > > > > > | Window management | Weeb power |
+> > > > > > > | ![image](https://github.com/user-attachments/assets/02983b9b-79ba-4c25-8717-90bef2357ae5) | ![image](https://github.com/user-attachments/assets/bbb332ec-962a-4e88-a95b-486d0bd8ce76) |
+
+### Very old stuff
 
 - Source code not likely to work but still available in the [`archive`](https://github.com/end-4/dots-hyprland/tree/archive) branch. Extremely spaghetti.
 - Click image for a presentation video
 
 <<<<<<< HEAD
+
 ### [m3ww](https://github.com/end-4/dots-hyprland/tree/archive)
 
 =======
+
 #### m3ww
->>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
-   <a href="https://streamable.com/85ch8x">
+
+<<<<<<< HEAD
+
+> > > > > > > # f973052d16cedb3c1ba580e88f22891036388be6
+
+Widget system: EWW | Support: No, dead
+
+> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
+> > > > > > > <a href="https://streamable.com/85ch8x">
+
     <img src="https://github.com/end-4/dots-hyprland/assets/97237370/09533e64-b6d7-47eb-a840-ee90c6776adf" alt="Material Eww!">
+
    </a>
 
 <<<<<<< HEAD
+
 ### [NovelKnock](https://github.com/end-4/dots-hyprland/tree/archive)
 
 =======
+
 #### NovelKnock
->>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
-   <a href="https://streamable.com/7vo61k">
+
+<<<<<<< HEAD
+
+> > > > > > > # f973052d16cedb3c1ba580e88f22891036388be6
+
+Widget system: EWW | Support: No, dead
+
+> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
+> > > > > > > <a href="https://streamable.com/7vo61k">
+
     <img src="https://github.com/end-4/dots-hyprland/assets/97237370/42903d03-bf6f-49d4-be7f-dd77e6cb389d" alt="Desktop Preview">
+
    </a>
 
 <<<<<<< HEAD
+
 ### [Hybrid](https://github.com/end-4/dots-hyprland/tree/archive)
 
 =======
+
 #### Hybrid
->>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
-   <a href="https://streamable.com/4oogot">
+
+<<<<<<< HEAD
+
+> > > > > > > # f973052d16cedb3c1ba580e88f22891036388be6
+
+Widget system: EWW | Support: No, dead
+
+> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
+> > > > > > > <a href="https://streamable.com/4oogot">
+
     <img src="https://github.com/end-4/dots-hyprland/assets/97237370/190deb1e-f6f5-46ce-8cf0-9b39944c079d" alt="click the circles!">
+
    </a>
 
 <<<<<<< HEAD
+
 ### [Windoes](https://github.com/end-4/dots-hyprland/tree/archive)
 
 =======
+
 #### Windoes
->>>>>>> f973052d16cedb3c1ba580e88f22891036388be6
-   <a href="https://streamable.com/5qx614">
+
+<<<<<<< HEAD
+
+> > > > > > > # f973052d16cedb3c1ba580e88f22891036388be6
+
+Widget system: EWW | Support: No, dead
+
+> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
+> > > > > > > <a href="https://streamable.com/5qx614">
+
     <img src="https://github.com/end-4/dots-hyprland/assets/97237370/b15317b1-f295-49f5-b90c-fb6328b8d886" alt="Desktop Preview">
+
    </a>
 
 <div align="center">
@@ -177,6 +263,8 @@ By the way...
 - AGS: [Aylur's config](https://github.com/Aylur/dotfiles/tree/ags-pre-ts), [kotontrion's config](https://github.com/kotontrion/dotfiles)
 - EWW: [fufexan's config](https://github.com/fufexan/dotfiles) (he thanks more people there btw)
 - AI bots for providing useful examples
+
+<sup><sup><sup><sup><sup>[@tokyobot](https://github.com/tokyob0t) for saying hi</sup></sup></sup></sup></sup>
 
 <div align="center">
     <h2>• stonks •</h2>

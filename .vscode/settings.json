@@ -1,0 +1,30 @@
+{
+    "qml.format.enable": true,
+    "qml.format.wrapObjectLiteralCurlyBrackets": "preserve",
+    "qml.format.insertFinalNewline": true,
+    "qml.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+    "qml.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "qml.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+    "qml.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
+    "qml.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "qml.format.insertSpaceAfterConstructor": false,
+    "qml.format.insertSpaceAfterSemicolonInForStatements": true,
+    "qml.format.insertSpaceBeforeAndAfterUnaryOperators": false,
+    "qml.format.insertSpaceAfterCommaDelimiter": true,
+    "qml.format.placeOpenBraceOnNewLineForFunctions": false,
+    "qml.format.placeOpenBraceOnNewLineForControlBlocks": false,
+    "qml.format.wrappingPolicy": "auto",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "[qml]": {
+        "editor.defaultFormatter": "theqtcompany.qt-qml",
+        "editor.formatOnSave": false,
+        "editor.wordWrap": "off"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    }
+}
