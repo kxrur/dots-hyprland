@@ -47,7 +47,7 @@ MouseArea {
 
     }
 
-    ResourcesPopup {
-        hoverTarget: root
-    }
+    // ResourcesPopup {
+    //     hoverTarget: root
+    // }
 }

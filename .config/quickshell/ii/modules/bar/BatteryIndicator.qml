@@ -52,8 +52,8 @@ MouseArea {
         }
     }
 
-    BatteryPopup {
-        id: batteryPopup
-        hoverTarget: root
-    }
+    // BatteryPopup {
+    //     id: batteryPopup
+    //     hoverTarget: root
+    // }
 }

@@ -45,8 +45,8 @@ Item {
         hoverEnabled: true
         acceptedButtons: Qt.NoButton
 
-        ClockWidgetTooltip {
-            hoverTarget: mouseArea
-        }
+        // ClockWidgetTooltip {
+        //     hoverTarget: mouseArea
+        // }
     }
 }
