@@ -43,10 +43,10 @@ Scope { // Scope
             function hide() {
                 oskLoader.active = false
             }
-            exclusiveZone: root.pinned ? implicitHeight - Appearance.sizes.hyprlandGapsOut : 0
+            exclusiveZone: 0
             implicitWidth: oskBackground.width + Appearance.sizes.elevationMargin * 2
             implicitHeight: oskBackground.height + Appearance.sizes.elevationMargin * 2
-            WlrLayershell.namespace: "quickshell:osk"
+            WlrLayershell.namespace: "quickshell:osk-topright"
             WlrLayershell.layer: WlrLayer.Overlay
             // Hyprland 0.49: Focus is always exclusive and setting this breaks mouse focus grab
             // WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
@@ -80,35 +80,6 @@ Scope { // Scope
                     id: oskRowLayout
                     anchors.centerIn: parent
                     spacing: 5
-                    VerticalButtonGroup {
-                        OskControlButton { // Pin button
-                            toggled: root.pinned
-                            onClicked: root.pinned = !root.pinned
-                            contentItem: MaterialSymbol {
-                                text: "keep"
-                                horizontalAlignment: Text.AlignHCenter
-                                iconSize: Appearance.font.pixelSize.larger
-                                color: root.pinned ? Appearance.m3colors.m3onPrimary : Appearance.colors.colOnLayer0
-                            }
-                        }
-                        OskControlButton {
-                            onClicked: () => {
-                                oskRoot.hide()
-                            }
-                            contentItem: MaterialSymbol {
-                                horizontalAlignment: Text.AlignHCenter
-                                text: "keyboard_hide"
-                                iconSize: Appearance.font.pixelSize.larger
-                            }
-                        }
-                    }
-                    Rectangle {
-                        Layout.topMargin: 20
-                        Layout.bottomMargin: 20
-                        Layout.fillHeight: true
-                        implicitWidth: 1
-                        color: Appearance.colors.colOutlineVariant
-                    }
                     OskContent {
                         id: oskContent
                         Layout.fillWidth: true
