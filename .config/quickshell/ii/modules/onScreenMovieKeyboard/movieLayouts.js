@@ -11,7 +11,7 @@ const byName = {
         keys: [
             [
                 { keytype: "normal", label: "←", shape: "normal", keycode: 105 },
-                { keytype: "normal", label: "_", shape: "space", keycode: 57 },
+                { keytype: "normal", label: "──", shape: "space", keycode: 57 },
                 { keytype: "normal", label: "→", shape: "normal", keycode: 106 },
             ],
         ],
