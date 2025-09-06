@@ -93,9 +93,9 @@ Item {
 
     MouseArea {
         anchors.fill: parent
-        acceptedButtons: Qt.BackButton
+        acceptedButtons: Qt.RightButton
         onPressed: (event) => {
-            if (event.button === Qt.BackButton) {
+            if (event.button === Qt.RightButton) {
                 Hyprland.dispatch(`togglespecialworkspace`);
             } 
         }

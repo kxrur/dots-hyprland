@@ -139,10 +139,10 @@ Item { // Bar content region
                 MouseArea {
                     // Right-click to toggle overview
                     anchors.fill: parent
-                    acceptedButtons: Qt.RightButton | Qt.MiddleButton
+                    acceptedButtons: Qt.BackButton | Qt.MiddleButton
 
                     onPressed: event => {
-                        if (event.button === Qt.RightButton) 
+                        if (event.button === Qt.BackButton) 
                             GlobalStates.overviewOpen = !GlobalStates.overviewOpen;
                         if (event.button === Qt.MiddleButton)
                             GlobalStates.oskOpen = !GlobalStates.oskOpen;
