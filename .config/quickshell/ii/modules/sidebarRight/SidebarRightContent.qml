@@ -136,7 +136,8 @@ Item {
                     }
                 }
                 NightLight {}
-                GameMode {}
+                //GameMode {}
+                MouseAcceleration {}
                 IdleInhibitor {}
                 EasyEffectsToggle {}
                 CloudflareWarp {}
