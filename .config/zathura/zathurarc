@@ -1,1 +1,4 @@
 set selection-clipboard clipboard
+
+# include themes/catppuccin-mocha
+include themes/lighthaus
