@@ -18,6 +18,7 @@ import qs.modules.mediaControls
 import qs.modules.notificationPopup
 import qs.modules.onScreenDisplay
 import qs.modules.onScreenKeyboard
+import qs.modules.onScreenMovieKeyboard
 import qs.modules.overview
 import qs.modules.regionSelector
 import qs.modules.screenCorners
@@ -45,7 +46,7 @@ ShellRoot {
     property bool enableNotificationPopup: true
     property bool enableOnScreenDisplay: true
     property bool enableOnScreenKeyboard: true
-    //property bool enableOnScreenMovieKeyboard: true
+    property bool enableOnScreenMovieKeyboard: true
     property bool enableOverview: true
     property bool enableRegionSelector: true
     property bool enableReloadPopup: true
@@ -76,7 +77,7 @@ ShellRoot {
     LazyLoader { active: enableNotificationPopup; component: NotificationPopup {} }
     LazyLoader { active: enableOnScreenDisplay; component: OnScreenDisplay {} }
     LazyLoader { active: enableOnScreenKeyboard; component: OnScreenKeyboard {} }
-    //LazyLoader { active: enableOnScreenMovieKeyboard; component: OnScreenMovieKeyboard {} }
+    LazyLoader { active: enableOnScreenMovieKeyboard; component: OnScreenMovieKeyboard {} }
     LazyLoader { active: enableOverview; component: Overview {} }
     LazyLoader { active: enableRegionSelector; component: RegionSelector {} }
     LazyLoader { active: enableReloadPopup; component: ReloadPopup {} }
