@@ -24,3 +24,5 @@ if status is-interactive # Commands to run in interactive sessions can go here
     alias q 'qs -c ii'
     
 end
+
+zoxide init --cmd cd fish | source
