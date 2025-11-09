@@ -40,7 +40,7 @@ Item {
     MouseArea {
         id: mouseArea
         anchors.fill: parent
-        hoverEnabled: true
+        hoverEnabled: false
         acceptedButtons: Qt.NoButton
 
         ClockWidgetPopup {
