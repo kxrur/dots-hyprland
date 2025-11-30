@@ -162,9 +162,12 @@ Scope {
     }
 
     IpcHandler {
-        target: "overview"
+        target: "search"
 
         function toggle() {
+            GlobalStates.overviewOpen = !GlobalStates.overviewOpen;
+        }
+        function workspacesToggle() {
             GlobalStates.overviewOpen = !GlobalStates.overviewOpen;
         }
         function close() {
@@ -182,7 +185,15 @@ Scope {
     }
 
     GlobalShortcut {
-        name: "overviewToggle"
+        name: "searchToggle"
+        description: "Toggles search on press"
+
+        onPressed: {
+            GlobalStates.overviewOpen = !GlobalStates.overviewOpen;
+        }
+    }
+    GlobalShortcut {
+        name: "overviewWorkspacesToggle"
         description: "Toggles overview on press"
 
         onPressed: {
@@ -190,16 +201,8 @@ Scope {
         }
     }
     GlobalShortcut {
-        name: "overviewClose"
-        description: "Closes overview"
-
-        onPressed: {
-            GlobalStates.overviewOpen = false;
-        }
-    }
-    GlobalShortcut {
-        name: "overviewToggleRelease"
-        description: "Toggles overview on release"
+        name: "searchToggleRelease"
+        description: "Toggles search on release"
 
         onPressed: {
             GlobalStates.superReleaseMightTrigger = true;
@@ -214,8 +217,8 @@ Scope {
         }
     }
     GlobalShortcut {
-        name: "overviewToggleReleaseInterrupt"
-        description: "Interrupts possibility of overview being toggled on release. " + "This is necessary because GlobalShortcut.onReleased in quickshell triggers whether or not you press something else while holding the key. " + "To make sure this works consistently, use binditn = MODKEYS, catchall in an automatically triggered submap that includes everything."
+        name: "searchToggleReleaseInterrupt"
+        description: "Interrupts possibility of search being toggled on release. " + "This is necessary because GlobalShortcut.onReleased in quickshell triggers whether or not you press something else while holding the key. " + "To make sure this works consistently, use binditn = MODKEYS, catchall in an automatically triggered submap that includes everything."
 
         onPressed: {
             GlobalStates.superReleaseMightTrigger = false;
