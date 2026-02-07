@@ -153,7 +153,7 @@ widgetStyle=Darkly
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=0
 Show Full Path=false
 Show Inline Previews=true
@@ -166,6 +166,10 @@ Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=168
 View Style=Detail
+
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
 
 [Sounds]
 Theme=freedesktop
