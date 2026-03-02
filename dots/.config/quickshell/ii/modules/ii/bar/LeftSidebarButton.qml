@@ -1,4 +1,6 @@
 import QtQuick
+import Quickshell
+import Quickshell.Hyprland
 import qs
 import qs.services
 import qs.modules.common
@@ -8,6 +10,9 @@ RippleButton {
     id: root
 
     property bool showPing: false
+
+    readonly property HyprlandMonitor monitor: Hyprland.monitorFor(root.QsWindow.window?.screen)
+    readonly property bool monitorIsFocused: Hyprland.focusedMonitor?.id === monitor?.id
 
     property bool aiChatEnabled: Config.options.policies.ai !== 0
     property bool translatorEnabled: Config.options.sidebar.translator.enable
@@ -57,7 +62,12 @@ RippleButton {
         anchors.centerIn: parent
         width: 19.5
         height: 19.5
-        source: Config.options.bar.topLeftIcon == 'distro' ? SystemInfo.distroIcon : `${Config.options.bar.topLeftIcon}-symbolic`
+        source: {
+            const iconName = root.monitorIsFocused
+                ? Config.options.bar.topLeftIcon
+                : Config.options.bar.topLeftIconUnfocused
+            return iconName === 'distro' ? SystemInfo.distroIcon : `${iconName}-symbolic`
+        }
         colorize: true
         color: Appearance.colors.colOnLayer0
 

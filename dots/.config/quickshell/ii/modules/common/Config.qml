@@ -238,6 +238,7 @@ Singleton {
                 property bool floatStyleShadow: true // Show shadow behind bar when cornerStyle == 1 (Float)
                 property bool borderless: false // true for no grouping of items
                 property string topLeftIcon: "spark" // Options: "distro" or any icon name in ~/.config/quickshell/ii/assets/icons
+                property string topLeftIconUnfocused: "desktop" // Icon shown when this bar's monitor doesn't have the active workspace. Same options as topLeftIcon
                 property bool showBackground: true
                 property bool verbose: true
                 property bool vertical: false
