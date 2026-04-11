@@ -11,6 +11,7 @@ for dir in ~/Desktop/git/dots-hyprland/dots/.config/*; do
 done
 
     ```
+
 </div>
 
 <div align="center">
@@ -40,15 +41,15 @@ done
 <details> 
   <summary>Installation (illogical-impulse Quickshell)</summary>
 
-   - _If you're new to Linux and decide to use Hyprland, you're in for a tough ride._
-   - Just run `bash <(curl -s https://ii.clsty.link/get)`
-     - Or, clone this repo and run `./setup install`
-     - See [document](https://ii.clsty.link/en/ii-qs/01setup/) for details.
-   - **Default keybinds**: Should be somewhat familiar to Windows or GNOME users. Important ones:
-     - `Super`+`/` = keybind list
-     - `Super`+`Enter` = terminal
-     - If for whatever reason the keybind list widget does not work, here's an image:
-     <img width="1412" height="828" alt="image" src="https://github.com/user-attachments/assets/8f7bd216-9e03-47e3-8709-0008772a4133" />
+- _If you're new to Linux and decide to use Hyprland, you're in for a tough ride._
+- Just run `bash <(curl -s https://ii.clsty.link/get)`
+  - Or, clone this repo and run `./setup install`
+  - See [document](https://ii.clsty.link/en/ii-qs/01setup/) for details.
+- **Default keybinds**: Should be somewhat familiar to Windows or GNOME users. Important ones:
+  - `Super`+`/` = keybind list
+  - `Super`+`Enter` = terminal
+  - Should look something like this:
+    <img width="1412" height="828" alt="image" src="https://github.com/user-attachments/assets/8f7bd216-9e03-47e3-8709-0008772a4133" />
 
 ```bash
 bash <(curl -s "https://end-4.github.io/dots-hyprland-wiki/setup.sh")
@@ -61,7 +62,6 @@ bash -c "$(curl -s https://end-4.github.io/dots-hyprland-wiki/setup.sh)"
 ```
 
 - **Manual** installation, other distros and more:
-
   - See the [Wiki](https://end-4.github.io/dots-hyprland-wiki/en/ii-qs/01setup/)
 
 - **Default keybinds**: Should be somewhat familiar if you've used Windows or GNOME.
@@ -73,13 +73,13 @@ bash -c "$(curl -s https://end-4.github.io/dots-hyprland-wiki/setup.sh)"
 <details>
   <summary>Software overview</summary>
 
-  | Software | Purpose |
-  | ------------- | ------------- |
-  | [Hyprland](https://github.com/hyprwm/hyprland) | The compositor (manages and renders windows) |
-  | [Quickshell](https://quickshell.outfoxxed.me/) | A QtQuick-based widget system, used for the status bar, sidebars, etc. |
-  | Others | See [deps-info.md](https://github.com/end-4/dots-hyprland/blob/main/sdata/deps-info.md) |
+| Software                                       | Purpose                                                                                 |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [Hyprland](https://github.com/hyprwm/hyprland) | The compositor (manages and renders windows)                                            |
+| [Quickshell](https://quickshell.outfoxxed.me/) | A QtQuick-based widget system, used for the status bar, sidebars, etc.                  |
+| Others                                         | See [deps-info.md](https://github.com/end-4/dots-hyprland/blob/main/sdata/deps-info.md) |
 
-  _THERE IS NO WAYBAR STOP FUCKING CALLING EVERY BAR WAYBAR_
+[not every bar is waybar] [not every bar is waybar] [not every bar is waybar] [not every bar is waybar] [not every bar is waybar]
 
 </details>
 
@@ -107,13 +107,16 @@ _Note: **THERE IS NO FUCKING WAYBAR**_
 > > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
 
 =======
->>>>>>> 437b2020b73bcc003092755ba94f168ff5cb849c
+
+> > > > > > > 437b2020b73bcc003092755ba94f168ff5cb849c
+
 <div align="center">
     <h2>• screenshots •</h2>
     <h3></h3>
 </div>
 
 <<<<<<< HEAD
+
 <table style="border-collapse: collapse;">
   <tr>
     <td width="25%">
@@ -134,6 +137,7 @@ _Note: **THERE IS NO FUCKING WAYBAR**_
 | Window management | Weeb power |
 =======
 =======
+
 <div align="center">
     <img src="assets/illogical-impulse.svg" alt="illogical-impulse logo" style="float:left; width:400;">
 </div>
@@ -142,16 +146,16 @@ _Note: **THERE IS NO FUCKING WAYBAR**_
 
 This is the latest and only supported style. Other stuff are still there mostly for viewing pleasure and not actual use, but code is still available, see below.
 
->>>>>>> 437b2020b73bcc003092755ba94f168ff5cb849c
-Widget system: Quickshell | Support: Yes
+> > > > > > > 437b2020b73bcc003092755ba94f168ff5cb849c
+> > > > > > > Widget system: Quickshell | Support: Yes
 
 [Showcase video](https://www.youtube.com/watch?v=RPwovTInagE)
 
 <<<<<<< HEAD
-| AI, settings app                                                                          | Some widgets                                                                              |
+| AI, settings app | Some widgets |
 | :---------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
 | ![image](https://github.com/user-attachments/assets/4d45e860-ae60-418a-a564-309b4939f5c4) | ![image](https://github.com/user-attachments/assets/4fcd63d9-0943-4b21-8737-4bed97b71961) |
-| Window management                                                                         | Weeb power                                                                                |
+| Window management | Weeb power |
 
 > > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
 > > > > > > > | ![image](https://github.com/user-attachments/assets/86cc511b-0d33-4c78-bcc0-3037d02a17da) | ![image](https://github.com/user-attachments/assets/292259fc-57d3-4663-a583-2ce2faad13fb) |
@@ -166,63 +170,44 @@ By the way...
 
 ## illogical-impulse<sup>AGS</sup> <sub>(Deprecated)</sub>
 
-=======
-=======
-| AI, settings app | Some widgets |
-|:---|:---------------|
+# =======
+
+| AI, settings app                                                                                                                     | Some widgets                                                                                                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ea0154a1-e984-4bb6-a424-23247cefe3c6" /> | <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6eba0d57-2606-4cea-8993-e6f169e82e70" /> |
+
 <<<<<<< HEAD
 | Window management | Weeb power |
 | <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e77a7c96-1905-4126-a2a0-434f818825a2" /> | <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c8544e99-8881-477f-b83a-d6e35c0184a1" /> |
->>>>>>> 437b2020b73bcc003092755ba94f168ff5cb849c
-=======
-| Window management | Built with love |
-| <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a7e6d29c-e82c-4934-98db-36c810ec999b" /> | <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1b806b53-9310-4c63-84a9-cec9e311d439" /> |
->>>>>>> 44422004791e8d651bf3094bfb6d51e7f1dee737
 
-### Other styles: Available at the end of the readme.
+> > > > > > > # 437b2020b73bcc003092755ba94f168ff5cb849c
+> > > > > > >
+> > > > > > > | Window management | Built with love |
+> > > > > > > | <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a7e6d29c-e82c-4934-98db-36c810ec999b" /> | <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1b806b53-9310-4c63-84a9-cec9e311d439" /> |
 
-<<<<<<< HEAD
-> > > > > > > f973052d16cedb3c1ba580e88f22891036388be6
+#### Other older styles are available at the end of the readme
 
-| AI  | Common widgets |
-| :-- | :------------- |
-
-=======
-Widget system: AGS | Support: Limited, no new features
-=======
 <div align="center">
     <h2>• thank you •</h2>
     <h3></h3>
 </div>
 
- - [@clsty](https://github.com/clsty) for making the dotfiles accessible by taking care of the install script and many other things
- - [@midn8hustlr](https://github.com/midn8hustlr) for greatly improving the color generation system
- - [@outfoxxed](https://github.com/outfoxxed/) for being extremely supportive in my Quickshell journey
- - Quickshell: [Soramane](https://github.com/caelestia-dots/shell/), [FridayFaerie](https://github.com/FridayFaerie/quickshell), [nydragon](https://github.com/nydragon/nysh)
- - AGS: [Aylur](https://github.com/Aylur/dotfiles/tree/ags-pre-ts), [kotontrion](https://github.com/kotontrion/dotfiles)
- - EWW: [fufexan](https://github.com/fufexan/dotfiles)
+- [@clsty](https://github.com/clsty) for making the dotfiles accessible by taking care of the install script and many other things
+- [@midn8hustlr](https://github.com/midn8hustlr) for greatly improving the color generation system
+- [@outfoxxed](https://github.com/outfoxxed/) for being extremely supportive in my Quickshell journey
+- Quickshell: [Soramane](https://github.com/caelestia-dots/shell/), [FridayFaerie](https://github.com/FridayFaerie/quickshell), [nydragon](https://github.com/nydragon/nysh)
+- AGS: [Aylur](https://github.com/Aylur/dotfiles/tree/ags-pre-ts), [kotontrion](https://github.com/kotontrion/dotfiles)
+- EWW: [fufexan](https://github.com/fufexan/dotfiles)
 
 <div align="center">
     <h2>• stonks •</h2>
     <h3></h3>
 </div>
 
-- If you would like to give me some milk😳 (i dont drink coffee): https://github.com/sponsors/end-4
-- Virtual tentacle cat website points chart
+- I promise not to attempt an +ULTRARICOSHOT irl... Coins can go here: https://github.com/sponsors/end-4
+- Tentacle cat hub twinkle internet points
 
 [![Stargazers over time](https://starchart.cc/end-4/dots-hyprland.svg?variant=adaptive)](https://starchart.cc/end-4/dots-hyprland)
-
-
-<div align="center">
-    <h2>• inspirations/copying •</h2>
-    <h3></h3>
-</div>
-
- - Inspiration: osu!lazer, Windows 11, Material Design 3, AvdanOS (concept)
- - Copying: The license allows you to. Personally I have absolutely no problem with others redistributing/recreating my work. There's no "stealing" (maybe unless you loudly do weird stuff and violate the license) <sub>(some people actually had to ask smh)</sub>
-
----
 
 ---
 
@@ -231,14 +216,15 @@ Widget system: AGS | Support: Limited, no new features
     <h3></h3>
 </div>
 
-- Source for illogical-impulse AGS available in the `ii-ags` branch, others in the `archive` branch.
-- The list goes from newest to the oldest, and the code quality is worse the older a style is
-- No bug fix or official support will be provided.
+- **Source**: illogical-impulse AGS in `ii-ags` branch, others in `archive` branch.
+- **No support** will be provided
+- **Reverse chronological order** list. Older = more naive & spaghetti code
 
 ### illogical-impulse<sup>AGS</sup>
 
 Widget system: AGS | Support: No
->>>>>>> 437b2020b73bcc003092755ba94f168ff5cb849c
+
+> > > > > > > 437b2020b73bcc003092755ba94f168ff5cb849c
 
 | AI  | Common widgets |
 | :-- | :------------- |
@@ -249,6 +235,7 @@ Widget system: AGS | Support: No
 > > > > > > > | ![image](https://github.com/user-attachments/assets/02983b9b-79ba-4c25-8717-90bef2357ae5) | ![image](https://github.com/user-attachments/assets/bbb332ec-962a-4e88-a95b-486d0bd8ce76) |
 
 <<<<<<< HEAD
+
 ### Very old stuff
 
 - Source code not likely to work but still available in the [`archive`](https://github.com/end-4/dots-hyprland/tree/archive) branch. Extremely spaghetti.
@@ -261,7 +248,9 @@ Widget system: AGS | Support: No
 =======
 
 =======
->>>>>>> 437b2020b73bcc003092755ba94f168ff5cb849c
+
+> > > > > > > 437b2020b73bcc003092755ba94f168ff5cb849c
+
 #### m3ww
 
 <<<<<<< HEAD
@@ -270,126 +259,38 @@ Widget system: AGS | Support: No
 
 Widget system: EWW | Support: No, dead
 
-> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
-> > > > > > > <a href="https://streamable.com/85ch8x">
-
-    <img src="https://github.com/end-4/dots-hyprland/assets/97237370/09533e64-b6d7-47eb-a840-ee90c6776adf" alt="Material Eww!">
-
-   </a>
-
-<<<<<<< HEAD
-
-### [NovelKnock](https://github.com/end-4/dots-hyprland/tree/archive)
-
-=======
+<a href="https://streamable.com/85ch8x">
+<img src="https://github.com/end-4/dots-hyprland/assets/97237370/09533e64-b6d7-47eb-a840-ee90c6776adf" alt="Material Eww!">
+</a>
 
 #### NovelKnock
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+Widget system: EWW | Support: No
 
-> > > > > > > # f973052d16cedb3c1ba580e88f22891036388be6
-
-Widget system: EWW | Support: No, dead
-
-> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
-> > > > > > > <a href="https://streamable.com/7vo61k">
-=======
-   Widget system: EWW | Support: No
->>>>>>> 437b2020b73bcc003092755ba94f168ff5cb849c
-
-    <img src="https://github.com/end-4/dots-hyprland/assets/97237370/42903d03-bf6f-49d4-be7f-dd77e6cb389d" alt="Desktop Preview">
-
-   </a>
-
-<<<<<<< HEAD
-
-### [Hybrid](https://github.com/end-4/dots-hyprland/tree/archive)
-
-=======
+<a href="https://streamable.com/7vo61k">
+<img src="https://github.com/end-4/dots-hyprland/assets/97237370/42903d03-bf6f-49d4-be7f-dd77e6cb389d" alt="Desktop Preview">
+</a>
 
 #### Hybrid
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+Widget system: EWW | Support: No
 
-> > > > > > > # f973052d16cedb3c1ba580e88f22891036388be6
-
-Widget system: EWW | Support: No, dead
-
-> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
-> > > > > > > <a href="https://streamable.com/4oogot">
-
-=======
-   Widget system: EWW | Support: No
-   
-   <a href="https://streamable.com/4oogot">
->>>>>>> 437b2020b73bcc003092755ba94f168ff5cb849c
-    <img src="https://github.com/end-4/dots-hyprland/assets/97237370/190deb1e-f6f5-46ce-8cf0-9b39944c079d" alt="click the circles!">
-
-   </a>
-
-<<<<<<< HEAD
-
-### [Windoes](https://github.com/end-4/dots-hyprland/tree/archive)
-
-=======
+<a href="https://streamable.com/4oogot">
+<img src="https://github.com/end-4/dots-hyprland/assets/97237370/190deb1e-f6f5-46ce-8cf0-9b39944c079d" alt="click the circles!">
+</a>
 
 #### Windoes
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+Widget system: EWW | Support: No
 
-> > > > > > > # f973052d16cedb3c1ba580e88f22891036388be6
-
-Widget system: EWW | Support: No, dead
-
-> > > > > > > f74ed76850bba8b7cc6414e782f97177eb53b0c6
-> > > > > > > <a href="https://streamable.com/5qx614">
-
-=======
-   Widget system: EWW | Support: No
-   
-   <a href="https://streamable.com/5qx614">
->>>>>>> 437b2020b73bcc003092755ba94f168ff5cb849c
-    <img src="https://github.com/end-4/dots-hyprland/assets/97237370/b15317b1-f295-49f5-b90c-fb6328b8d886" alt="Desktop Preview">
-
-   </a>
-
-<<<<<<< HEAD
-<div align="center">
-    <h2>• thank you •</h2>
-    <h3></h3>
-</div>
-
-- [@clsty](https://github.com/clsty) for making my work accessible by taking care of the install script and many other things
-- [@midn8hustlr](https://github.com/midn8hustlr) for greatly improving the color generation system
-- [@outfoxxed](https://github.com/outfoxxed/) for being extremely supportive in my Quickshell journey
-- Quickshell: [Soramane](https://github.com/caelestia-dots/shell/), [FridayFaerie](https://github.com/FridayFaerie/quickshell), [nydragon](https://github.com/nydragon/nysh)
-- AGS: [Aylur's config](https://github.com/Aylur/dotfiles/tree/ags-pre-ts), [kotontrion's config](https://github.com/kotontrion/dotfiles)
-- EWW: [fufexan's config](https://github.com/fufexan/dotfiles) (he thanks more people there btw)
-- AI bots for providing useful examples
-
-<sup><sup><sup><sup><sup>[@tokyobot](https://github.com/tokyob0t) for saying hi</sup></sup></sup></sup></sup>
-
-<div align="center">
-    <h2>• stonks •</h2>
-    <h3></h3>
-</div>
-
-- Funny useful number: <https://github.com/sponsors/end-4>
-- Funny useless number:
-
-[![Stargazers over time](https://starchart.cc/end-4/dots-hyprland.svg?variant=adaptive)](https://starchart.cc/end-4/dots-hyprland)
-
-- _Jokes aside i do appreciate both_
+<a href="https://streamable.com/5qx614">
+<img src="https://github.com/end-4/dots-hyprland/assets/97237370/b15317b1-f295-49f5-b90c-fb6328b8d886" alt="Desktop Preview">
+</a>
 
 <div align="center">
     <h2>• inspirations/copying •</h2>
     <h3></h3>
 </div>
 
-- Inspiration: osu!lazer, Windows 11, Material Design 3, AvdanOS (concept)
-- Copying: The license allows you to. Personally I have absolutely no problem with others redistributing/recreating my work. There's no "stealing" (unless you do weird stuff and violate the license). (this note is here because some people actually asked)
-=======
->>>>>>> 437b2020b73bcc003092755ba94f168ff5cb849c
+- Inspiration: osu!lazer (Hybrid), Windows 11 (Windoes), AvdanOS (NovelKnock), Material Design 3 (m3ww & later)
+- Copying: Absolutely, feel free. Just follow the license and it's all good
