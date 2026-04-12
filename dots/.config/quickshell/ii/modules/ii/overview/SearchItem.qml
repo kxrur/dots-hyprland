@@ -50,7 +50,7 @@ RippleButton {
         ColorUtils.transparentize(Appearance.colors.colPrimaryContainer, 1))
     colBackgroundHover: Appearance.colors.colPrimaryContainer
     colRipple: Appearance.colors.colPrimaryContainerActive
-    property color colForeground: selected ? Appearance.colors.colOnPrimaryContainer : Appearance.m3colors.m3onSurface
+    property color colForeground: Appearance.m3colors.m3onSurface 
 
     readonly property string highlightPrefix: `<u><font color="${Appearance.colors.colPrimary}">`
     readonly property string highlightSuffix: `</font></u>`
@@ -187,7 +187,7 @@ RippleButton {
             spacing: 0
             StyledText {
                 font.pixelSize: Appearance.font.pixelSize.smaller
-                color: root.selected ? Appearance.colors.colOnPrimaryContainer : Appearance.colors.colSubtext
+                color: root.selected ? Appearance.m3colors.m3onSurface : Appearance.colors.colSubtext
                 visible: root.itemType && root.itemType != Translation.tr("App")
                 text: root.itemType
             }
@@ -247,7 +247,7 @@ RippleButton {
             visible: root.selected
             id: clickAction
             font.pixelSize: Appearance.font.pixelSize.normal
-            color: Appearance.colors.colOnPrimaryContainer
+            color: Appearance.m3colors.m3onSurface
             horizontalAlignment: Text.AlignRight
             text: root.itemClickActionName
         }

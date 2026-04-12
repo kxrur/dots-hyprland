@@ -91,6 +91,28 @@ RowLayout {
         }
 
         Keys.onPressed: event => {
+            if (event.key === Qt.Key_W && (event.modifiers & Qt.ControlModifier)) {
+                const hasSelection = searchInput.selectionStart !== searchInput.selectionEnd;
+                if (hasSelection) {
+                    const start = Math.min(searchInput.selectionStart, searchInput.selectionEnd);
+                    const end = Math.max(searchInput.selectionStart, searchInput.selectionEnd);
+                    searchInput.remove(start, end);
+                    searchInput.cursorPosition = start;
+                } else {
+                    const currentText = searchInput.text;
+                    const end = searchInput.cursorPosition;
+                    if (end > 0) {
+                        let start = end;
+                        while (start > 0 && /\s/.test(currentText[start - 1])) start--;
+                        while (start > 0 && !/\s/.test(currentText[start - 1])) start--;
+                        searchInput.remove(start, end);
+                        searchInput.cursorPosition = start;
+                    }
+                }
+                event.accepted = true;
+                return;
+            }
+
             if (event.key === Qt.Key_Tab) {
                 if (LauncherSearch.results.length === 0) return;
                 const tabbedText = LauncherSearch.results[0].name;
