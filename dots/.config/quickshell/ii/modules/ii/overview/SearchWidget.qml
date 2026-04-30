@@ -52,6 +52,23 @@ Item { // Wrapper
         if (event.key === Qt.Key_Escape)
             return;
 
+        if ((event.modifiers & Qt.ControlModifier) && event.key === Qt.Key_N) {
+            if (LauncherSearch.results.length > 0) {
+                let maxIndex = Math.max(0, appResults.count - 1);
+                appResults.currentIndex = Math.min(appResults.currentIndex + 1, maxIndex);
+                event.accepted = true;
+            }
+            return;
+        }
+
+        if ((event.modifiers & Qt.ControlModifier) && event.key === Qt.Key_P) {
+            if (LauncherSearch.results.length > 0) {
+                appResults.currentIndex = Math.max(appResults.currentIndex - 1, 0);
+                event.accepted = true;
+            }
+            return;
+        }
+
         // Handle Backspace: focus and delete character if not focused
         if (event.key === Qt.Key_Backspace) {
             if (!searchBar.searchInput.activeFocus) {
