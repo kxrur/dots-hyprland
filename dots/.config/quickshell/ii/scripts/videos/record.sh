@@ -22,6 +22,48 @@ getaudiooutput() {
 getactivemonitor() {
     hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .name'
 }
+snap_region_to_scale() {
+    local region="$1"
+
+    local x y w h
+    read -r x y w h < <(echo "$region" | awk -F'[ ,x]' '{print $1, $2, $3, $4}')
+
+    local scale
+    scale=$(hyprctl -j monitors | jq -r '.[] | select(.focused==true) | .scale')
+
+    local den
+    den=$(awk -v s="$scale" 'BEGIN {
+        for (d=1; d<=16; d++) {
+            if (int(s*d+0.5)==s*d) { print d; exit }
+        }
+        print 1
+    }')
+
+    # Snap helpers
+    snap_down() {
+        local val=$1
+        local d=$2
+        echo $(( (val / d) * d ))
+    }
+    snap_up() {
+        local val=$1
+        local d=$2
+        echo $(( ((val + d - 1) / d) * d ))
+    }
+
+    # Apply snapping
+    local x2 y2 w2 h2
+    x2=$(snap_down "$x" "$den")
+    y2=$(snap_down "$y" "$den")
+    w2=$(snap_up "$w" "$den")
+    h2=$(snap_up "$h" "$den")
+
+    # Prevent zero size
+    [[ "$w2" -le 0 ]] && w2=$den
+    [[ "$h2" -le 0 ]] && h2=$den
+
+    echo "$x2,$y2 ${w2}x${h2}"
+}
 
 mkdir -p "$RECORDING_DIR"
 cd "$RECORDING_DIR" || exit
@@ -67,6 +109,8 @@ else
                 exit 1
             fi
         fi
+
+        region="$(snap_region_to_scale "$region")"
 
         notify-send "Starting recording" 'recording_'"$(getdate)"'.mp4' -a 'Recorder' & disown
         if [[ $SOUND_FLAG -eq 1 ]]; then
