@@ -82,11 +82,14 @@ RowLayout {
 
         onAccepted: {
             if (appResults.count > 0) {
-                // Get the first visible delegate and trigger its click
-                let firstItem = appResults.itemAtIndex(0);
-                if (firstItem && firstItem.clicked) {
-                    firstItem.clicked();
-                }
+                // Trigger the currently highlighted item (fallback to first)
+                let selectedItem = appResults.currentItem;
+                if (!selectedItem && appResults.currentIndex >= 0)
+                    selectedItem = appResults.itemAtIndex(appResults.currentIndex);
+                if (!selectedItem)
+                    selectedItem = appResults.itemAtIndex(0);
+                if (selectedItem && selectedItem.clicked)
+                    selectedItem.clicked();
             }
         }
 
