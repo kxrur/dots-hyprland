@@ -1,3 +1,5 @@
+local smw = require("plugins.split-monitor-workspaces")
+
 hl.config ({
     general = {
         snap = {
@@ -40,12 +42,7 @@ hl.config ({
         swallow_regex = ""
     },
     plugin = {
-        --split-monitor-workspaces = {
-        --    count = 5,
-        --    keep_focused = 0,
-        --    enable_notifications = 0,
-        --    enable_persistent_workspaces = 1
-        --}
+        
     },
     xwayland = {
         force_zero_scaling = true
@@ -59,6 +56,13 @@ hl.config ({
 hl.device({
     name = "pnp0c50:00-04f3:31ff-touchpad",
     enabled = true
+})
+
+smw.setup({
+    workspace_count = 5,
+    keep_focused = 0,
+    enable_notifications = 0,
+    enable_persistent_workspaces = 1
 })
 
 hl.monitor({

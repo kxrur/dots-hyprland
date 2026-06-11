@@ -181,3 +181,5 @@ hl.bind("SUPER + SHIFT + mouse_down",
 
 hl.bind("SUPER + SHIFT + mouse_up",
     hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"))
+
+hl.bind("SUPER + Z", hl.dsp.window.drag(), { mouse = true })
