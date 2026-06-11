@@ -71,6 +71,9 @@ hl.unbind("SUPER + ALT + mouse_up")
 hl.unbind("CTRL + SUPER + Left")
 hl.unbind("CTRL + SUPER + Reft")
 
+hl.unbind("SUPER + SUPER_L")
+hl.unbind("SUPER + SUPER_R")
+
 -- ------------------------- BIND ------------------------- 
 
 -- Screenshot area
@@ -159,7 +162,7 @@ hl.bind("SUPER + ALT + F",
 
 -- Toggle overview (kept structure reference)
 hl.bind("SUPER + D",
-    hl.dsp.global("quickshell:overviewWorkspacesToggle"),
+    hl.dsp.global("quickshell:searchToggle"),
     { description = "Toggle launcher (alt)" })
 
 -- submap (virtual box)
