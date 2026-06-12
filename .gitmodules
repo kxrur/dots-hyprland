@@ -1,3 +1,9 @@
 [submodule "dots/.config/quickshell/ii/modules/common/widgets/shapes"]
 	path = dots/.config/quickshell/ii/modules/common/widgets/shapes
 	url = https://github.com/end-4/rounded-polygon-qmljs.git
+[submodule "dots/.config/hypr/plugins/hypr/plugins/split-monitor-workspaces"]
+	path = dots/.config/hypr/plugins/hypr/plugins/split-monitor-workspaces
+	url = git@github.com:kxrur/split-monitor-workspaces.git
+[submodule "dots/.config/hypr/plugins/split-monitor-workspaces"]
+	path = dots/.config/hypr/plugins/split-monitor-workspaces
+	url = git@github.com:kxrur/split-monitor-workspaces.git

@@ -1,10 +1,11 @@
-hl.bind("CTRL+SUPER+ALT+Slash", hl.dsp.exec_cmd("xdg-open ~/.config/hypr/custom/keybinds.lua"), {description = "Edit user keybinds"} )
+hl.bind("CTRL+SUPER+ALT+Slash", hl.dsp.exec_cmd("xdg-open ~/.config/hypr/custom/keybinds.lua"),
+    { description = "Edit user keybinds" })
 
 require("hyprland.lib")
 require("hyprland.variables")
 local smw = require("plugins.split-monitor-workspaces")
 
--- ------------------------- UNBIND ------------------------- 
+-- ------------------------- UNBIND -------------------------
 
 hl.unbind("SUPER + O")
 hl.unbind("SUPER + Z")
@@ -26,7 +27,7 @@ for i = 10, 19 do
     hl.unbind("SUPER + ALT + code:" .. i)
 end
 
-for _, code in ipairs({87,88,89,83,84,85,79,80,81,90}) do
+for _, code in ipairs({ 87, 88, 89, 83, 84, 85, 79, 80, 81, 90 }) do
     hl.unbind("SUPER + ALT + code:" .. code)
 end
 
@@ -34,7 +35,7 @@ for i = 10, 19 do
     hl.unbind("SUPER + code:" .. i)
 end
 
-for _, code in ipairs({87,88,89,83,84,85,79,80,81,90}) do
+for _, code in ipairs({ 87, 88, 89, 83, 84, 85, 79, 80, 81, 90 }) do
     hl.unbind("SUPER + code:" .. code)
 end
 
@@ -81,11 +82,12 @@ for i = 1, 10 do
     hl.unbind("SUPER + SHIFT +" .. (i % 10))
 end
 
--- ------------------------- BIND ------------------------- 
+-- ------------------------- BIND -------------------------
 
 -- Screenshot area
 hl.bind("SUPER + CONTROL + S",
-    hl.dsp.exec_cmd("mkdir -p ~/Pictures/Screenshots && ~/.config/ags/scripts/grimblast.sh --freeze copysave area ~/Pictures/Screenshots/Screenshot_\"$(date '+%Y-%m-%d_%H.%M.%S')\".png"),
+    hl.dsp.exec_cmd(
+        "mkdir -p ~/Pictures/Screenshots && ~/.config/ags/scripts/grimblast.sh --freeze copysave area ~/Pictures/Screenshots/Screenshot_\"$(date '+%Y-%m-%d_%H.%M.%S')\".png"),
     { description = "Screenshot area" })
 
 -- App launcher
