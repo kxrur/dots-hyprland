@@ -153,8 +153,8 @@ for i = 1, smw.get_amount_of_workspaces() do
 end
 
 
-hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind("SUPER" .. " + mouse_up", smw.cycle_workspaces("next"))
+hl.bind("SUPER" .. " + mouse_down", smw.cycle_workspaces("prev"))
 
 -- rotate monitor
 hl.bind("code:157",

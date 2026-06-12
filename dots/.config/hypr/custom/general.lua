@@ -1,6 +1,6 @@
 local smw = require("plugins.split-monitor-workspaces")
 
-hl.config ({
+hl.config({
     general = {
         snap = {
             enabled = true,
@@ -13,7 +13,8 @@ hl.config ({
         -- flat acceleration
         accel_profile = "flat",
         -- Keyboard: Add a layout and uncomment kb_options for Win+Space switching shortcut
-        kb_layout = "us", "ru",
+        kb_layout = "us",
+        "ru",
         -- bind layout switch
         kb_options = "grp:win_space_toggle", -- FIXME
         -- hyprlanad binds still work on other layouts
@@ -42,7 +43,7 @@ hl.config ({
         swallow_regex = ""
     },
     plugin = {
-        
+
     },
     xwayland = {
         force_zero_scaling = true
@@ -62,7 +63,8 @@ smw.setup({
     workspace_count = 5,
     keep_focused = 0,
     enable_notifications = 0,
-    enable_persistent_workspaces = 1
+    enable_persistent_workspaces = 1,
+    toggle_monitor = true
 })
 
 hl.monitor({
