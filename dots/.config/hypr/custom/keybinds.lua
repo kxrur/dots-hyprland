@@ -2,6 +2,7 @@ hl.bind("CTRL+SUPER+ALT+Slash", hl.dsp.exec_cmd("xdg-open ~/.config/hypr/custom/
 
 require("hyprland.lib")
 require("hyprland.variables")
+local smw = require("plugins.split-monitor-workspaces")
 
 -- ------------------------- UNBIND ------------------------- 
 
@@ -74,6 +75,12 @@ hl.unbind("CTRL + SUPER + Reft")
 hl.unbind("SUPER + SUPER_L")
 hl.unbind("SUPER + SUPER_R")
 
+
+for i = 1, 10 do
+    hl.unbind("SUPER + " .. (i % 10))
+    hl.unbind("SUPER + SHIFT +" .. (i % 10))
+end
+
 -- ------------------------- BIND ------------------------- 
 
 -- Screenshot area
@@ -136,14 +143,13 @@ hl.bind("SUPER + SHIFT + O", hl.dsp.layout("togglesplit"))
 -- #/# bind = Super+Alt, Hash,, # Send to workspace # (1, 2, 3,...)
 
 -- Switch workspaces with mainMod + [0-5]
-for i = 1, 5 do
-    hl.bind("SUPER + " .. i, hl.dsp.focus({ workspace = tostring(i) }))
-end
-
--- Move active window to workspace
-for i = 1, 5 do
-    hl.bind("SUPER + SHIFT + " .. i,
-        hl.dsp.window.move({ workspace = tostring(i) }))
+for i = 1, smw.get_amount_of_workspaces() do
+    local n = tostring(i)
+    if n == "10" then n = "0" end -- Optional if you configured 10 workspaces: bind workspace 10 to SUPER + 0
+    -- Switch to the Nth workspace on the currently focused monitor.
+    hl.bind("SUPER" .. " +" .. n, smw.workspace(n))
+    -- Move the active window to the Nth workspace on the currently focused monitor silently (no focus change).
+    hl.bind("SUPER" .. " + SHIFT +" .. n, smw.move_to_workspace_silent(n))
 end
 
 
