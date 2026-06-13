@@ -60,13 +60,18 @@ hl.window_rule({
     workspace = "8 silent",
 })
 
-hl.window_rule({
-    name = "browser",
-    match = {
-        class = "zen",
-    },
-    workspace = "7 silent",
-})
+
+local hostname = io.popen("hostname"):read("*l")
+
+if not (hostname and hostname:find("lap", 1, true)) then
+    hl.window_rule({
+        name = "browser",
+        match = {
+            class = "zen",
+        },
+        workspace = "7 silent",
+    })
+end
 
 hl.window_rule({
     name = "emulator",

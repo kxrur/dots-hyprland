@@ -1,4 +1,62 @@
 local smw = require("plugins.split-monitor-workspaces")
+local hostname = io.popen("hostname"):read("*l")
+
+local input_cfg = {
+    -- flat acceleration
+    -- Keyboard: Add a layout and uncomment kb_options for Win+Space switching shortcut
+    kb_layout = "us, ru",
+    -- bind layout switch
+    kb_options = "grp:win_space_toggle",
+    -- hyprlanad binds still work on other layouts
+    resolve_binds_by_sym = false,
+    numlock_by_default = false,
+    repeat_delay = 250,
+    repeat_rate = 35,
+
+    touchpad = {
+        natural_scroll = true,
+        disable_while_typing = true,
+        clickfinger_behavior = true,
+        scroll_factor = 0.5
+    },
+
+    special_fallthrough = true,
+    follow_mouse = 1
+}
+
+hl.device({
+    name = "pnp0c50:00-04f3:31ff-touchpad",
+    enabled = true
+})
+
+local smwConfig = {
+    keep_focused = 0,
+    enable_notifications = 0,
+    enable_persistent_workspaces = 1,
+    toggle_monitor = true
+}
+
+if hostname and hostname:find("lap", 1, true) then
+    smwConfig.workspace_count = 10
+    smwConfig.input = {
+        sensitivity = 1,
+    }
+    input_cfg.kb_options = input_cfg.kb_options
+        .. ",caps:escape,altwin:swap_lalt_lwin"
+    hl.monitor({
+        output = "eDP-1",
+        mode = "1920x1080@60.006001",
+        position = "0x0",
+        scale = "1",
+    })
+else
+    smwConfig.workspace_count = 5
+    smwConfig.input = {
+        accel_profile = "flat",
+    }
+end
+
+smw.setup(smwConfig)
 
 hl.config({
     general = {
@@ -9,30 +67,8 @@ hl.config({
             respect_gaps = true
         }
     },
-    input = {
-        -- flat acceleration
-        accel_profile = "flat",
-        -- Keyboard: Add a layout and uncomment kb_options for Win+Space switching shortcut
-        kb_layout = "us",
-        "ru",
-        -- bind layout switch
-        kb_options = "grp:win_space_toggle", -- FIXME
-        -- hyprlanad binds still work on other layouts
-        resolve_binds_by_sym = false,
-        numlock_by_default = false,
-        repeat_delay = 250,
-        repeat_rate = 35,
+    input = input_cfg,
 
-        touchpad = {
-            natural_scroll = true,
-            disable_while_typing = true,
-            clickfinger_behavior = true,
-            scroll_factor = 0.5
-        },
-
-        special_fallthrough = true,
-        follow_mouse = 1
-    },
     cursor = {
         inactive_timeout = 3
     },
@@ -41,8 +77,6 @@ hl.config({
     },
     misc = {
         swallow_regex = ""
-    },
-    plugin = {
 
     },
     xwayland = {
@@ -54,18 +88,6 @@ hl.config({
     }
 })
 
-hl.device({
-    name = "pnp0c50:00-04f3:31ff-touchpad",
-    enabled = true
-})
-
-smw.setup({
-    workspace_count = 5,
-    keep_focused = 0,
-    enable_notifications = 0,
-    enable_persistent_workspaces = 1,
-    toggle_monitor = true
-})
 
 hl.monitor({
     output = "DP-2",
