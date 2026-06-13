@@ -99,7 +99,7 @@ Item {
         anchors.fill: parent
         acceptedButtons: Qt.RightButton
         onPressed: (event) => {
-            if (event.button === Qt.BackButton) {
+            if (event.button === Qt.RightButton) {
                 Hyprland.dispatch(`hl.dsp.workspace.toggle_special("special")`);
             } 
         }
