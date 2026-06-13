@@ -25,6 +25,7 @@ if status is-interactive
     alias pamcan pacman
     alias q 'qs -c ii'
     alias nv nvim
+    alias cx codex
     if test "$TERM" != linux
         alias ls 'eza --icons'
     end
