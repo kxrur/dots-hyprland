@@ -51,9 +51,7 @@ if hostname and hostname:find("lap", 1, true) then
     })
 else
     smwConfig.workspace_count = 5
-    smwConfig.input = {
-        accel_profile = "flat",
-    }
+    input_cfg.accel_profile = "flat"
 end
 
 smw.setup(smwConfig)
