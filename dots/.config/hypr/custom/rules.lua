@@ -39,7 +39,7 @@ hl.window_rule({
     },
     immediate = true,
     workspace = "2 silent",
-    fullscreen_state = "3 3",
+    -- fullscreen_state = "3 3",
     -- doens't work atm
     -- no_initial_focus = on
 })
