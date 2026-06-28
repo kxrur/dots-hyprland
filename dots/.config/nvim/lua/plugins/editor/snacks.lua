@@ -9,7 +9,10 @@ return {
     terminal = {
       shell = "fish",
       win = {
+        style = "terminal",
         position = "float",
+        border = "rounded",
+        backdrop = 60,
       },
     },
     explorer = {
