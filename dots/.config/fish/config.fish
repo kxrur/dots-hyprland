@@ -32,6 +32,8 @@ if status is-interactive
     if test "$TERM" = xterm-kitty
         alias ssh 'kitten ssh'
     end
+
+    fish_add_path ~/.cargo/bin
 end
 
 zoxide init --cmd cd fish | source
