@@ -38,9 +38,7 @@ local smwConfig = {
 
 if hostname and hostname:find("lap", 1, true) then
     smwConfig.workspace_count = 10
-    smwConfig.input = {
-        sensitivity = 1,
-    }
+    input_cfg.sensitivity = 0.5
     input_cfg.kb_options = input_cfg.kb_options
         .. ",caps:escape,altwin:swap_lalt_lwin"
     hl.monitor({
