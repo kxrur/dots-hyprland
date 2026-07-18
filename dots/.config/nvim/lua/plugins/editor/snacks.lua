@@ -22,7 +22,11 @@ return {
     },
     picker = {
       sources = {
+        files = {
+          hidden = true,
+        },
         explorer = {
+          hidden = true,
           -- your explorer picker configuration comes here
           -- or leave it empty to use the default settings
           layout = {
