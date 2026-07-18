@@ -21,6 +21,14 @@ return {
       -- refer to the configuration section below
     },
     picker = {
+      win = {
+        input = {
+          keys = {
+            -- Restore Neovim's normal insert-mode behavior: delete back to the start.
+            ["<C-u>"] = { "<C-u>", mode = "i", expr = true },
+          },
+        },
+      },
       sources = {
         files = {
           hidden = true,
