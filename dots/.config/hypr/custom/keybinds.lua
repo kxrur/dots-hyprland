@@ -187,10 +187,10 @@ hl.bind("SUPER + SHIFT + mouse:276", hl.dsp.exec_cmd("playerctl next"))
 hl.bind("SUPER + SHIFT + mouse:275", hl.dsp.exec_cmd("playerctl previous"))
 hl.bind("SUPER + SHIFT + mouse:274", hl.dsp.exec_cmd("playerctl play-pause"))
 
-hl.bind("SUPER + SHIFT + mouse_down",
+hl.bind("SUPER + SHIFT + mouse_up",
     hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1.5"))
 
-hl.bind("SUPER + SHIFT + mouse_up",
+hl.bind("SUPER + SHIFT + mouse_down",
     hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"))
 
 hl.bind("SUPER + Z", hl.dsp.window.drag(), { mouse = true })
