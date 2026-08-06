@@ -193,4 +193,16 @@ hl.bind("SUPER + SHIFT + mouse_up",
 hl.bind("SUPER + SHIFT + mouse_down",
     hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"))
 
+-- Toggle mute for the PipeWire/PulseAudio stream belonging to the focused window.
+hl.bind(
+    "SUPER + SHIFT + Home",
+    hl.dsp.exec_cmd(
+        "pid=$(hyprctl activewindow -j | jq -r '.pid // empty'); " ..
+        "[ -n \"$pid\" ] && pactl --format=json list sink-inputs | " ..
+        "jq -r --arg pid \"$pid\" '.[] | select(.properties[\"application.process.id\"] == $pid) | .index' | " ..
+        "xargs -r -n1 -I{} pactl set-sink-input-mute {} toggle"
+    ),
+    { description = "Audio: Toggle mute for active window" }
+)
+
 hl.bind("SUPER + Z", hl.dsp.window.drag(), { mouse = true })
