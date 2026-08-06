@@ -35,7 +35,7 @@ hl.window_rule({
 hl.window_rule({
     name = "games",
     match = {
-        class = "steam_app.*|cs2|momentum",
+        class = "steam_app.*|cs2|momentum|osu!",
     },
     immediate = true,
     workspace = "2 silent",
