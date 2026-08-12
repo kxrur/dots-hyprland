@@ -535,6 +535,7 @@ Singleton {
                             { "size": 1, "type": "idleInhibitor" },
                             { "size": 1, "type": "mic" },
                             { "size": 2, "type": "audio" },
+                            { "size": 2, "type": "hdmiMonitor" },
                             { "size": 2, "type": "nightLight" }
                         ]
                     }
