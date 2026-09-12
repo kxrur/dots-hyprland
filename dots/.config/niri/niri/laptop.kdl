@@ -1,0 +1,32 @@
+// Optional laptop overrides (Hyprland's `if hostname:find("lap")` branch).
+// Not included by default. To use it:
+//   1. Comment out the desktop `output` blocks in custom/general.kdl.
+//   2. Uncomment the include at the bottom of config.kdl.
+
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            // caps:escape + swap Alt/Win like the Hyprland laptop branch.
+            options "grp:win_space_toggle,caps:escape,altwin:swap_lalt_lwin"
+        }
+        repeat-delay 250
+        repeat-rate 35
+        numlock
+    }
+
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+        click-method "clickfinger"
+        scroll-factor 0.5
+        accel-profile "flat"
+    }
+}
+
+output "eDP-1" {
+    mode "1920x1080@60.006"
+    scale 1
+    position x=0 y=0
+}

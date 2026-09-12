@@ -1,0 +1,12 @@
+// Hyprland had gaps_in 4 / gaps_out 5. The base (inner + outer) gap comes from
+// DMS Settings via dms/layout.kdl; this adds +1 on every side for the outer gap.
+// struts is non-merging and must live in one place.
+// NOTE: left/right positive struts also make the adjacent off-screen column peek.
+layout {
+    struts {
+        left 1
+        right 1
+        top -2
+        bottom 1
+    }
+}

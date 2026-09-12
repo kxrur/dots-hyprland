@@ -1,0 +1,38 @@
+// User overrides (mirrors hypr/custom/general.lua).
+// Hostname kxr-b850eaglewifi6e does not contain "lap", so this is the
+// desktop branch. Laptop overrides live in niri/laptop.kdl.
+
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:win_space_toggle"
+        }
+        repeat-delay 250
+        repeat-rate 35
+        numlock
+    }
+
+    // Match Hyprland's follow_mouse = 1.
+    // max-scroll-amount="0%" only focuses windows that are already fully
+    // visible, so hovering never scrolls the view. Remove it for plain
+    // focus-follows-mouse (focusing an off-screen column will scroll to it).
+    focus-follows-mouse max-scroll-amount="5%"
+}
+
+
+// ---- Gaps / border (base gaps_in 4, gaps_out 5, border 1px, rounding 20) ----
+layout {
+    gaps 5
+
+    focus-ring {
+        active-color "#0DB7D4"
+        inactive-color "#313136"
+    }
+
+    border {
+        off
+        active-color "#0DB7D4"
+        inactive-color "#313136"
+    }
+}

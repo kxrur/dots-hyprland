@@ -1,0 +1,44 @@
+// niri configuration entrypoint.
+//
+// The layout mirrors the dots-hyprland Hyprland config:
+//   niri/    -> default definitions, like hypr/hyprland/
+//   custom/  -> user overrides, optional, like hypr/custom/
+//   dms/     -> fragments managed by DankMaterialShell (colors, layout, ...)
+//
+// `include` is positional: later settings override earlier ones, and binds
+// override previously-defined conflicting keys.
+
+// ---- Defaults ----
+include "niri/general.kdl"
+include "niri/execs.kdl"
+include "niri/rules.kdl"
+include "niri/keybinds.kdl"
+
+// ---- Custom overrides (optional) ----
+include optional=true "custom/general.kdl"
+include optional=true "custom/execs.kdl"
+include optional=true "custom/rules.kdl"
+include optional=true "custom/keybinds.kdl"
+
+// ---- DMS-managed fragments ----
+// Dynamic colors, gaps/radius/xray, alt-tab styling, DMS floating windows and
+// the blurred wallpaper backdrop. Configure these from DMS Settings.
+include optional=true "dms/colors.kdl"
+include optional=true "dms/layout.kdl"
+include optional=true "dms/alttab.kdl"
+include optional=true "dms/windowrules.kdl"
+include optional=true "dms/wpblur.kdl"
+include optional=true "dms/outputs.kdl"
+include optional=true "dms/input.kdl"
+include optional=true "dms/cursor.kdl"
+
+// dms/binds.kdl is intentionally NOT included: keybinds are owned by
+// niri/keybinds.kdl + custom/keybinds.kdl.
+// include optional=true "dms/binds.kdl"
+
+// ---- Final overrides (applied last) ----
+// Outer-gap emulation via struts (see custom/gaps.kdl).
+include optional=true "custom/gaps.kdl"
+
+// ---- Optional laptop overrides (uncomment when on the laptop) ----
+// include optional=true "niri/laptop.kdl"

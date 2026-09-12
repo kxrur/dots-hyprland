@@ -1,0 +1,165 @@
+// Window rules (defaults, ported from hypr/hyprland/rules.lua).
+// Personal/app-specific rules live in custom/rules.kdl.
+
+// ---- Floating file dialogs ----
+window-rule {
+    match title="^(Open File)(.*)$"
+    open-floating true
+}
+window-rule {
+    match title="^(Select a File)(.*)$"
+    open-floating true
+}
+window-rule {
+    match title="^(Choose wallpaper)(.*)$"
+    open-floating true
+}
+window-rule {
+    match title="^(Open Folder)(.*)$"
+    open-floating true
+}
+window-rule {
+    match title="^(Save As)(.*)$"
+    open-floating true
+}
+window-rule {
+    match title="^(Library)(.*)$"
+    open-floating true
+}
+window-rule {
+    match title="^(File Upload)(.*)$"
+    open-floating true
+}
+window-rule {
+    match title="^(.*)(wants to save)$"
+    open-floating true
+}
+window-rule {
+    match title="^(.*)(wants to open)$"
+    open-floating true
+}
+
+// ---- Floating utility windows ----
+window-rule {
+    match app-id="^(blueberry\\.py)$"
+    open-floating true
+}
+window-rule {
+    match app-id="^(guifetch)$"
+    open-floating true
+}
+window-rule {
+    match app-id="^(pavucontrol)$"
+    open-floating true
+    default-column-width { proportion 0.45; }
+    default-window-height { proportion 0.45; }
+}
+window-rule {
+    match app-id="^(org.pulseaudio.pavucontrol)$"
+    open-floating true
+    default-column-width { proportion 0.45; }
+    default-window-height { proportion 0.45; }
+}
+window-rule {
+    match app-id="^(nm-connection-editor)$"
+    open-floating true
+    default-column-width { proportion 0.45; }
+    default-window-height { proportion 0.45; }
+}
+window-rule {
+    match app-id=".*plasmawindowed.*"
+    open-floating true
+}
+window-rule {
+    match app-id="kcm_.*"
+    open-floating true
+}
+window-rule {
+    match app-id=".*bluedevilwizard"
+    open-floating true
+}
+window-rule {
+    match title=".*Welcome"
+    open-floating true
+}
+window-rule {
+    match title="^(illogical-impulse Settings)$"
+    open-floating true
+}
+window-rule {
+    match title=".*Shell conflicts.*"
+    open-floating true
+}
+window-rule {
+    match app-id="org.freedesktop.impl.portal.desktop.kde"
+    open-floating true
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.65; }
+}
+window-rule {
+    match app-id="^(Zotero)$"
+    open-floating true
+    default-column-width { proportion 0.45; }
+    default-window-height { proportion 0.45; }
+}
+
+// kde-material-you-colors spawns a helper window while switching themes.
+window-rule {
+    match app-id="^(plasma-changeicons)$"
+    open-floating true
+    open-focused false
+}
+
+// ---- Picture-in-Picture ----
+window-rule {
+    match title="^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$"
+    open-floating true
+}
+
+// ---- Screen sharing ----
+window-rule {
+    match title=".*is sharing (a window|your screen).*"
+    open-floating true
+}
+
+// ---- Tiling ----
+// Force tiling for apps that would otherwise float.
+window-rule {
+    match app-id="^dev\\.warp\\.Warp$"
+    open-floating false
+}
+
+// ---- From the DMS niri defaults ----
+// WezTerm initial configure workaround.
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Terminals draw their own decorations.
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id="Alacritty"
+    match app-id="zen"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="kitty"
+    draw-border-with-background false
+}
+
+// Steam notification toasts bottom-right.
+window-rule {
+    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+// Floating small utility windows.
+window-rule {
+    match app-id=r#"^org\.gnome\.Calculator$"#
+    match app-id=r#"^gnome-calculator$"#
+    match app-id=r#"^galculator$"#
+    match app-id=r#"^blueman-manager$"#
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    match app-id=r#"^xdg-desktop-portal$"#
+    open-floating true
+}

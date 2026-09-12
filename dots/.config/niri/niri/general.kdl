@@ -1,0 +1,161 @@
+// General niri settings: appearance, layout and DankMaterialShell integration.
+// Personal input/output settings live in custom/general.kdl.
+
+config-notification {
+    disable-failed
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+// ---- Environment ----
+environment {
+    XDG_CURRENT_DESKTOP "niri"
+    QT_QPA_PLATFORM "wayland"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+}
+
+debug {
+    // Allows notification actions and window activation from DMS.
+    honor-xdg-activation-with-invalid-serial
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+// ---- Layout ----
+layout {
+    // Let the wallpaper (and DMS backdrop) show through in the overview.
+    background-color "transparent"
+
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 2
+    }
+
+    border {
+        off
+    }
+
+    shadow {
+        on
+        softness 20
+        spread 10
+        offset x=0 y=2
+        color "#00000020"
+    }
+}
+
+overview {
+    workspace-shadow {
+        off
+    }
+}
+
+// ---- Animations ----
+animations {
+    workspace-switch {
+        spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
+    }
+    window-open {
+        duration-ms 150
+        curve "ease-out-expo"
+    }
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+    horizontal-view-movement {
+        spring damping-ratio=0.85 stiffness=423 epsilon=0.0001
+    }
+    window-movement {
+        spring damping-ratio=0.75 stiffness=323 epsilon=0.0001
+    }
+    window-resize {
+        spring damping-ratio=0.85 stiffness=423 epsilon=0.0001
+    }
+    config-notification-open-close {
+        spring damping-ratio=0.65 stiffness=923 epsilon=0.001
+    }
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+    overview-open-close {
+        spring damping-ratio=0.85 stiffness=800 epsilon=0.0001
+    }
+}
+
+// ---- Background blur (niri >= 26.04) ----
+blur {
+    passes 3
+    noise 0.05
+}
+
+// NOTE: the Hyprland config disables blur for every window
+// (hyprland/rules.lua sets no_blur for class ".*"), so window blur is left
+// opt-in here too. Uncomment the rule below to blur all windows.
+//
+// window-rule {
+//     background-effect {
+//         blur true
+//         xray false
+//     }
+// }
+
+// ---- Window rules (defaults) ----
+window-rule {
+    geometry-corner-radius 20
+    clip-to-geometry true
+}
+
+// DMS windows (settings, notepad, process list, ...) open floating.
+// dms/windowrules.kdl manages the same rule once DMS Settings is used.
+window-rule {
+    match app-id="com.danklinux.dms"
+    open-floating true
+    default-column-width { fixed 1080; }
+    default-window-height { fixed 920; }
+}
+
+// ---- DMS layer integration ----
+// Place the wallpaper (and the blurred wallpaper, when enabled) on the
+// niri overview backdrop.
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="dms:blurwallpaper"
+    place-within-backdrop true
+}
+
+// Use non-xray blur behind DMS surfaces so window content shows through.
+// NOTE: once DMS writes dms/layout.kdl, that managed fragment also controls
+// the xray/background-effect behavior for DMS surfaces.
+layer-rule {
+    match namespace=r#"^dms:.*"#
+    background-effect {
+        xray false
+    }
+}

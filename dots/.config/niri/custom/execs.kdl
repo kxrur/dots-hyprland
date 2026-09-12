@@ -1,0 +1,5 @@
+// User startup programs (mirrors hypr/custom/execs.lua).
+
+spawn-at-startup "coolercontrol"
+// spawn-at-startup "steam"
+// spawn-at-startup "zen-browser"

@@ -1,0 +1,31 @@
+// User window rules (mirrors hypr/custom/rules.lua).
+//
+// niri's `open-on-workspace` only targets NAMED workspaces, so the numbered
+// workspace assignments from Hyprland are kept commented with the equivalent
+// named form. Define/bind the named workspaces you want to use.
+
+// ---- Floating by app-id ----
+window-rule {
+    match app-id="Emulator|scrcpy"
+    open-floating true
+}
+
+window-rule {
+    match title="FFXIVLauncher"
+    open-floating true
+}
+
+// ---- Borderless / fullscreen launches ----
+// Hyprland "fake fullscreen" (fullscreen_state 0 2) for these apps.
+// window-rule {
+//     match app-id="zen|code|krita|tv.anilibria.AniLibria"
+//     open-maximized true
+// }
+
+// ---- Workspace pinning (named-workspace form) ----
+// window-rule { match app-id="steam";  open-on-workspace "steam"; }
+// window-rule { match app-id="heroic"; open-on-workspace "games"; open-fullscreen true; }
+// window-rule { match app-id="steam_app.*|cs2|momentum|osu!|overwatch.exe|gunfire reborn.exe"; open-on-workspace "games"; }
+// window-rule { match app-id="App|tinywell|battery_test_gui"; open-on-workspace "dev"; }
+// window-rule { match app-id="org.coolercontrol.CoolerControl"; open-on-workspace "cooler"; }
+// window-rule { match app-id="zen"; open-on-workspace "browser"; }

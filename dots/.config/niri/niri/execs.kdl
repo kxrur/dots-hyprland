@@ -1,0 +1,13 @@
+// Startup programs (former exec-once commands from the Hyprland config).
+// DMS owns idle, lock, notifications and wallpaper and is started by the
+// user service `dms.service`, so nothing shell-related is spawned here.
+// For non-systemd setups, uncomment the line below.
+// spawn-at-startup "dms" "run"
+
+// Core components (keyring, activation environment)
+spawn-sh-at-startup "gnome-keyring-daemon --start --components=secrets"
+spawn-sh-at-startup "dbus-update-activation-environment --all"
+spawn-sh-at-startup "sleep 1 && dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+
+// Audio
+spawn-sh-at-startup "easyeffects --hide-window --service-mode"
