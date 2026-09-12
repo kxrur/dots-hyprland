@@ -1,0 +1,122 @@
+// Kitty-matched theme derived from the quickshell-generated kitty palette
+// bg #1B1A21 / fg #EAD3DB, pastel pink/purple/blue accents
+themes {
+    kitty {
+        text_unselected {
+            base 234 211 219
+            background 27 26 33
+            emphasis_0 226 77 245
+            emphasis_1 144 209 247
+            emphasis_2 255 186 194
+            emphasis_3 199 153 224
+        }
+        text_selected {
+            base 234 211 219
+            background 46 43 58
+            emphasis_0 226 77 245
+            emphasis_1 144 209 247
+            emphasis_2 255 186 194
+            emphasis_3 199 153 224
+        }
+        ribbon_selected {
+            base 27 26 33
+            background 226 77 245
+            emphasis_0 255 186 194
+            emphasis_1 243 204 255
+            emphasis_2 199 153 224
+            emphasis_3 144 209 247
+        }
+        ribbon_unselected {
+            base 27 26 33
+            background 198 180 188
+            emphasis_0 226 77 245
+            emphasis_1 234 211 219
+            emphasis_2 144 209 247
+            emphasis_3 199 153 224
+        }
+        table_title {
+            base 226 77 245
+            background 0
+            emphasis_0 255 186 194
+            emphasis_1 144 209 247
+            emphasis_2 199 153 224
+            emphasis_3 243 204 255
+        }
+        table_cell_selected {
+            base 234 211 219
+            background 46 43 58
+            emphasis_0 226 77 245
+            emphasis_1 144 209 247
+            emphasis_2 255 186 194
+            emphasis_3 199 153 224
+        }
+        table_cell_unselected {
+            base 234 211 219
+            background 27 26 33
+            emphasis_0 226 77 245
+            emphasis_1 144 209 247
+            emphasis_2 255 186 194
+            emphasis_3 199 153 224
+        }
+        list_selected {
+            base 234 211 219
+            background 46 43 58
+            emphasis_0 226 77 245
+            emphasis_1 144 209 247
+            emphasis_2 255 186 194
+            emphasis_3 199 153 224
+        }
+        list_unselected {
+            base 234 211 219
+            background 27 26 33
+            emphasis_0 226 77 245
+            emphasis_1 144 209 247
+            emphasis_2 255 186 194
+            emphasis_3 199 153 224
+        }
+        frame_selected {
+            base 226 77 245
+            background 0
+            emphasis_0 255 186 194
+            emphasis_1 144 209 247
+            emphasis_2 199 153 224
+            emphasis_3 0
+        }
+        frame_highlight {
+            base 243 204 255
+            background 0
+            emphasis_0 226 77 245
+            emphasis_1 144 209 247
+            emphasis_2 255 186 194
+            emphasis_3 199 153 224
+        }
+        exit_code_success {
+            base 144 209 247
+            background 0
+            emphasis_0 255 186 194
+            emphasis_1 27 26 33
+            emphasis_2 199 153 224
+            emphasis_3 142 172 213
+        }
+        exit_code_error {
+            base 226 77 245
+            background 0
+            emphasis_0 255 221 234
+            emphasis_1 0
+            emphasis_2 0
+            emphasis_3 0
+        }
+        multiplayer_user_colors {
+            player_1 226 77 245
+            player_2 144 209 247
+            player_3 0
+            player_4 255 186 194
+            player_5 199 153 224
+            player_6 0
+            player_7 243 204 255
+            player_8 0
+            player_9 0
+            player_10 0
+        }
+    }
+}
