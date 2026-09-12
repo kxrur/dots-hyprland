@@ -10,4 +10,4 @@
 [submodule "vendor/DankMaterialShell"]
 	path = vendor/DankMaterialShell
 	url = https://github.com/kxrur/DankMaterialShell.git
-	branch = island-middle-click
+	branch = focus-class-only

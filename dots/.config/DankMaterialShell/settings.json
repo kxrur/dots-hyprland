@@ -57,6 +57,7 @@
   "groupActiveWorkspaceApps": true,
   "showOccupiedWorkspacesOnly": true,
   "workspaceActiveAppHighlightEnabled": true,
+  "focusedWindowShowTitle": false,
   "appIdSubstitutions": [],
   "weatherEnabled": false,
   "cursorSettings": {
