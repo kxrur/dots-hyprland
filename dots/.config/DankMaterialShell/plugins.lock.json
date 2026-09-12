@@ -1,10 +1,4 @@
 {
   "lockfileVersion": 1,
-  "plugins": {
-    "virtualKeyboard": {
-      "repo": "https://github.com/sitolam/dms-plugins",
-      "path": "plugins/virtualkeyboard",
-      "commit": "85820f16252afcc74361117879764d735c97ef1b"
-    }
-  }
+  "plugins": {}
 }
