@@ -7,3 +7,7 @@
 [submodule "dots/.config/hypr/plugins/split-monitor-workspaces"]
 	path = dots/.config/hypr/plugins/split-monitor-workspaces
 	url = git@github.com:kxrur/split-monitor-workspaces.git
+[submodule "vendor/DankMaterialShell"]
+	path = vendor/DankMaterialShell
+	url = https://github.com/kxrur/DankMaterialShell.git
+	branch = island-middle-click

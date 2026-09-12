@@ -82,6 +82,7 @@
   "muxType": "zellij",
   "notificationFocusedMonitor": true,
   "dankIslandBarId": "default",
+  "dankIslandInteractionMode": "click",
   "dankIslandHomeCompactTight": true,
   "dankIslandHomeLayout": [
     {
