@@ -27,6 +27,7 @@ if status is-interactive
     alias nv nvim
     alias cx codex
     alias cxr "codex resume"
+    alias zj "zellij"
     if test "$TERM" != linux
         alias ls 'eza --icons'
     end
