@@ -10,4 +10,4 @@
 [submodule "vendor/DankMaterialShell"]
 	path = vendor/DankMaterialShell
 	url = https://github.com/kxrur/DankMaterialShell.git
-	branch = focus-class-only
+	branch = master
