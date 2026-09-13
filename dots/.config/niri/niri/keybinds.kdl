@@ -65,6 +65,11 @@ binds {
     Mod+WheelScrollRight { focus-column-right; }
     Mod+WheelScrollLeft { focus-column-left; }
 
+    // Ctrl+Super+wheel: scroll horizontally between columns (mouse wheels
+    // only send vertical scroll). Matches niri's Shift+wheel direction.
+    Mod+Ctrl+WheelScrollUp cooldown-ms=50 { focus-column-left; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=50 { focus-column-right; }
+
     // ---- Overview / switcher ----
     Mod+Tab { focus-monitor-next; }
     Mod+grave { toggle-overview; }
