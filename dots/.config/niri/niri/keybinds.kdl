@@ -169,12 +169,9 @@ binds {
     // Mod+Z { ... } // Hyprland "window drag" has no direct equivalent
 }
 
-// Alt-Tab switching between recent windows (highlight styling in dms/alttab.kdl).
+// Niri fills in default recent-windows binds when this section is omitted;
+// an empty binds block removes all of them.
 recent-windows {
     binds {
-        Alt+Tab         { next-window scope="output"; }
-        Alt+Shift+Tab   { previous-window scope="output"; }
-        Alt+grave       { next-window filter="app-id"; }
-        Alt+Shift+grave { previous-window filter="app-id"; }
     }
 }
