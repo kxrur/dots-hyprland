@@ -121,9 +121,14 @@
       ],
       "rightWidgets": [
         "systemTray",
+        {
+          "id": "keyboard_layout_name",
+          "enabled": true,
+          "keyboardLayoutNameShowIcon": false,
+          "keyboardLayoutNameCompactMode": true
+        },
         "memUsage",
         "cpuUsage",
-        "notificationButton",
         "controlCenterButton"
       ],
       "spacing": 4,
