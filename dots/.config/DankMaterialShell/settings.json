@@ -18,7 +18,8 @@
     {
       "id": "brightnessSlider",
       "enabled": true,
-      "width": 50
+      "width": 50,
+      "deviceName": "ddc:i2c-10"
     },
     {
       "id": "wifi",
@@ -64,8 +65,8 @@
     "theme": "System Default",
     "size": 24,
     "niri": {
-      "hideWhenTyping": false,
-      "hideAfterInactiveMs": 0
+      "hideWhenTyping": true,
+      "hideAfterInactiveMs": 3000
     },
     "hyprland": {
       "hideOnKeyPress": false,
