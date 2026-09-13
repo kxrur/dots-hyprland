@@ -6,6 +6,7 @@
   "mouseScrollFactor": 1.2,
   "touchpadScrollFactor": 0.1,
   "keyboardLayouts": "us,ru",
+  "keyboardOptions": "grp:win_space_toggle",
   "clockFormat": "24h",
   "systemTrayIconTintMode": "monochrome",
   "controlCenterShowMicPercent": true,
