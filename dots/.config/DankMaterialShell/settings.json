@@ -83,6 +83,7 @@
   "muxType": "zellij",
   "notificationFocusedMonitor": true,
   "osdAlwaysShowValue": true,
+  "osdMediaVolumeEnabled": false,
   "osdPowerProfileEnabled": true,
   "powerMenuGridLayout": true,
   "updaterIntervalSeconds": 0,
@@ -104,7 +105,10 @@
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
-        "launcherButton",
+        {
+          "id": "launcherButton",
+          "enabled": false
+        },
         "workspaceSwitcher",
         "focusedWindow"
       ],
