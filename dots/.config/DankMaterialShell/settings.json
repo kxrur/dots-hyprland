@@ -20,7 +20,7 @@
       "id": "brightnessSlider",
       "enabled": true,
       "width": 50,
-      "deviceName": "ddc:i2c-10"
+      "deviceName": "leds:input14::mute"
     },
     {
       "id": "wifi",
@@ -58,6 +58,7 @@
   "workspaceDragReorder": false,
   "groupActiveWorkspaceApps": true,
   "showOccupiedWorkspacesOnly": true,
+  "workspaceSwitcherScrollColumns": true,
   "workspaceActiveAppHighlightEnabled": true,
   "focusedWindowShowTitle": false,
   "appIdSubstitutions": [],
