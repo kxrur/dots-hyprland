@@ -24,6 +24,9 @@ input {
 layout {
     gaps 5
 
+    // New windows open as full-width columns instead of niri's default half.
+    default-column-width { proportion 1.0; }
+
     focus-ring {
         active-color "#0DB7D4"
         inactive-color "#313136"
