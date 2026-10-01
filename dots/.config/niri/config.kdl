@@ -41,4 +41,4 @@ include optional=true "dms/cursor.kdl"
 include optional=true "custom/gaps.kdl"
 
 // ---- Optional laptop overrides (uncomment when on the laptop) ----
-// include optional=true "niri/laptop.kdl"
+include optional=true "niri/laptop.kdl"

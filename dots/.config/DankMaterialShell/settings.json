@@ -59,7 +59,6 @@
   "maxWorkspaceIcons": 999,
   "groupWorkspaceApps": false,
   "showOccupiedWorkspacesOnly": true,
-  "workspaceSwitcherScrollColumns": true,
   "workspaceActiveAppHighlightEnabled": true,
   "focusedWindowShowTitle": false,
   "appIdSubstitutions": [],
@@ -122,6 +121,17 @@
         "weather"
       ],
       "rightWidgets": [
+        {
+          "id": "battery",
+          "enabled": true,
+          "showBatteryPercent": true,
+          "showBatteryPercentOnlyOnBattery": false,
+          "showBatteryTime": false,
+          "showBatteryTimeOnlyOnBattery": false,
+          "showBatteryPowerCharging": false,
+          "showBatteryPowerDischarging": false,
+          "batteryStyle": "icon"
+        },
         "systemTray",
         {
           "id": "keyboard_layout_name",
