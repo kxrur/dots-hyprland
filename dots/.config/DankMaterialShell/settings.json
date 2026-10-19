@@ -3,6 +3,7 @@
   "niriLayoutGapsOverride": 5,
   "niriLayoutBorderSize": 1,
   "mouseAccelProfile": "flat",
+  "mouseAccelSpeed": 0.1,
   "mouseScrollFactor": 1.2,
   "touchpadScrollFactor": 0.1,
   "keyboardLayouts": "us,ru",
@@ -20,7 +21,7 @@
       "id": "brightnessSlider",
       "enabled": true,
       "width": 50,
-      "deviceName": "leds:input14::mute"
+      "deviceName": "ddc:i2c-10"
     },
     {
       "id": "wifi",
@@ -80,10 +81,10 @@
       "cursorHideTimeout": 0
     }
   },
+  "soundsEnabled": false,
   "soundVolumeChanged": false,
   "muteSoundsWhenMediaPlaying": false,
-  "acMonitorTimeout": 600,
-  "acSuspendTimeout": 900,
+  "acMonitorTimeout": 180,
   "muxType": "zellij",
   "notificationFocusedMonitor": true,
   "osdAlwaysShowValue": true,
@@ -227,7 +228,8 @@
     "hslHue": -1,
     "hslSaturation": 0,
     "hslLightness": 1,
-    "valid": true
+    "valid": true,
+    "rgba": -1
   },
   "systemMonitorCustomColor": {
     "r": 1,
@@ -240,7 +242,8 @@
     "hslHue": -1,
     "hslSaturation": 0,
     "hslLightness": 1,
-    "valid": true
+    "valid": true,
+    "rgba": -1
   },
   "configVersion": 18
 }
