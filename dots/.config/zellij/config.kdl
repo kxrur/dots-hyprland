@@ -182,8 +182,8 @@ keybinds clear-defaults=true {
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
         bind "Alt v" {
-            LaunchPlugin "https://github.com/kxrur/zellij-zen/releases/latest/download/zellij-zen.wasm" {
-                floating true
+            MessagePlugin "https://github.com/kxrur/zellij-zen/releases/download/v0.3.2/zellij-zen.wasm" {
+                name "toggle"
             }
         }
     }
@@ -275,6 +275,7 @@ plugins {
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
     zellij:link
+    "https://github.com/kxrur/zellij-zen/releases/download/v0.3.2/zellij-zen.wasm"
 }
 web_client {
     font "monospace"
