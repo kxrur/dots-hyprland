@@ -1,6 +1,6 @@
 // User window rules (mirrors hypr/custom/rules.lua).
 
-// ---- Named workspaces: 1-5 primary (DP-2), 6-9 second monitor (HDMI-A-2) ----
+// ---- Named workspaces: 1-5 primary (DP-2), 6-10 second monitor (HDMI-A-2) ----
 workspace "1" {
     open-on-output "DP-2"
 }
@@ -26,6 +26,9 @@ workspace "8" {
     open-on-output "HDMI-A-2"
 }
 workspace "9" {
+    open-on-output "HDMI-A-2"
+}
+workspace "10" {
     open-on-output "HDMI-A-2"
 }
 
@@ -66,4 +69,18 @@ window-rule {
 window-rule {
     match app-id="^(Emulator|scrcpy)$"
     open-floating true
+}
+
+// ---- Telegram -> HDMI-A-2, 5th workspace (10) ----
+window-rule {
+    match app-id="^org.telegram.desktop$"
+    open-on-workspace "10"
+}
+
+// Telegram media viewer floats at 60% of the screen (inherits workspace 10).
+window-rule {
+    match app-id="^org.telegram.desktop$" title="Media viewer"
+    open-floating true
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.6; }
 }

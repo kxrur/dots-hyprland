@@ -43,7 +43,7 @@ binds {
     Mod+Shift+Ctrl+K { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+J { move-column-to-monitor-down; }
 
-    // ---- Workspaces (1-5, matching the Hyprland desktop branch) ----
+    // ---- Workspaces (1-5 DP-2, 6-10 HDMI-A-2) ----
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -53,7 +53,9 @@ binds {
     Mod+Shift+2 { move-window-to-workspace 2 focus=false; }
     Mod+Shift+3 { move-window-to-workspace 3 focus=false; }
     Mod+Shift+4 { move-window-to-workspace 4 focus=false; }
-    Mod+Shift+5 { move-window-to-workspace 5 focus=false; }
+    // HDMI-A-2's 5th workspace (Telegram) is workspace 10.
+    Mod+Shift+5 { focus-workspace "10"; }
+    Mod+Ctrl+Shift+5 { move-window-to-workspace 5 focus=false; }
 
     Mod+Page_Down { focus-workspace-down; }
     Mod+Page_Up { focus-workspace-up; }
