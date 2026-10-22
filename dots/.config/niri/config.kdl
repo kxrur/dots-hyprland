@@ -40,5 +40,6 @@ include optional=true "dms/cursor.kdl"
 // Outer-gap emulation via struts (see custom/gaps.kdl).
 include optional=true "custom/gaps.kdl"
 
-// ---- Optional laptop overrides (uncomment when on the laptop) ----
-// include optional=true "niri/laptop.kdl"
+// ---- Laptop overrides ----
+// This branch is the laptop branch, so the overrides are always active.
+include optional=true "niri/laptop.kdl"
