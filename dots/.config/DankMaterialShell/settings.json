@@ -86,6 +86,7 @@
   "soundVolumeChanged": false,
   "muteSoundsWhenMediaPlaying": false,
   "acMonitorTimeout": 180,
+  "lockBeforeSuspend": true,
   "muxType": "zellij",
   "notificationFocusedMonitor": true,
   "osdAlwaysShowValue": true,
