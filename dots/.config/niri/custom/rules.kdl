@@ -84,3 +84,13 @@ window-rule {
     default-column-width { proportion 0.6; }
     default-window-height { proportion 0.6; }
 }
+
+// ---- ytm-rs: floating bottom-right quadrant on workspace 8 (HDMI-A-2) ----
+window-rule {
+    match app-id="^ytm-rs$"
+    open-on-workspace "8"
+    open-floating true
+    default-column-width { proportion 0.75; }
+    default-window-height { proportion 0.75; }
+    default-floating-position x=5 y=5 relative-to="bottom-right"
+}
