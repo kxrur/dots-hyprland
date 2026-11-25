@@ -17,6 +17,13 @@ input {
     // visible, so hovering never scrolls the view. Remove it for plain
     // focus-follows-mouse (focusing an off-screen column will scroll to it).
     focus-follows-mouse max-scroll-amount="5%"
+
+    // Move the pointer to the newly focused window when focus changes from the
+    // keyboard (Mod+H/J/K/L, Mod+arrow, workspace/monitor focus). Default warps
+    // only the axes needed to land inside the window; use mode="center-xy" to
+    // always center it, or mode="center-xy-always" to re-center even when the
+    // pointer is already inside the newly focused window.
+    warp-mouse-to-focus
 }
 
 
